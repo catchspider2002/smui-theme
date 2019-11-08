@@ -1,13 +1,18 @@
 <script>
-	export let name;
-	import Test from "./Test.svelte"
+  export let name;
+  import Card from "./Card.svelte";
+  import Checkbox from "./Checkbox.svelte";
+  import Test from "./Test.svelte";
+  import Textfield from "./Textfield.svelte";
+  import ButtonComponents from "./ButtonComponents.svelte";
 </script>
 
 <style>
-	h1 {
-		color: purple;
-	}
+  .bg {
+    background-color: rgb(105, 105, 105);
+  }
 </style>
 
-<Test/>
-<h1>Hello {name}!</h1>
+<div class="bg">
+  <ButtonComponents/>
+</div>
