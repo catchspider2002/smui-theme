@@ -27,7 +27,7 @@
 </svelte:head>
 
 <section>
-  <h2>Button</h2>
+  <div class="font-bold text-sm">Button</div>
 
   <div>
     <Button on:click={() => clicked++}>

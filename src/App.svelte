@@ -4,6 +4,7 @@
   import Checkbox from "./Checkbox.svelte";
   import Test from "./Test.svelte";
   import Textfield from "./Textfield.svelte";
+  import Tabs from "./Tabs.svelte";
   import ButtonComponents from "./ButtonComponents.svelte";
 </script>
 
@@ -14,5 +15,5 @@
 </style>
 
 <div class="bg">
-  <ButtonComponents/>
+  <Tabs/>
 </div>

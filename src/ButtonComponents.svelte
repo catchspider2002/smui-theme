@@ -21,9 +21,9 @@
     margin-bottom: 0;
   }
 
-  * :global(.mdc-button) {
+  /* * :global(.mdc-button) {
       border-radius: 9999px;    
-  }
+  } */
 </style>
 
 <svelte:head>
@@ -31,7 +31,7 @@
 </svelte:head>
 
 <section>
-  <h2>Button</h2>
+  <div class="font-bold text-sm">Button</div>
 
   <div>
     <Button on:click={() => clicked++}>
@@ -69,7 +69,7 @@
       <Label>Trailing Icon</Label>
       <Icon class="material-icons">favorite</Icon>
     </Button>
-    <Button on:click={() => clicked++} variant="raised">
+    <Button on:click={() => clicked++} variant="raised" class="mdc-button-rounded">
       <Label>Outlined</Label>
       <Icon class="material-icons">favorite</Icon>
     </Button>
