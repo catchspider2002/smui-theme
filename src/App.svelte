@@ -6,14 +6,9 @@
   import Textfield from "./Textfield.svelte";
   import Tabs from "./Tabs.svelte";
   import ButtonComponents from "./ButtonComponents.svelte";
+  import Dashboard from "./Dashboard.svelte";
 </script>
 
-<style>
-  .bg {
-    background-color: rgb(105, 105, 105);
-  }
-</style>
-
-<div class="bg">
-  <Tabs/>
+<div class="mdc-theme--background">
+  <Dashboard/>
 </div>
