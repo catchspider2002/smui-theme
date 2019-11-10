@@ -84,7 +84,7 @@
   }
 </style>
 
-<Select
+<!-- <Select
   enhanced
   bind:value={valueStandardEnhanced}
   class="demo-select-width"
@@ -95,4 +95,20 @@
       {fruit}
     </Option>
   {/each}
-</Select>
+</Select> -->
+
+<div class="bg-gray-400 w-full h-48 flex justify-center text-center content-around pt-2 px-1">
+  <div class="bg-gray-200 w-1/4 mx-2 mt-2">First quarter</div>
+  <div class="bg-gray-300 w-1/4 mx-2 mt-2">Second quarter</div>
+  <div class="bg-gray-200 w-1/4 mx-2 mt-2">Third quarter</div>
+  <div class="bg-gray-200 w-1/4 mx-2 mt-2">Last quarter</div>
+</div>
+<div class="bg-gray-400 w-full h-48 flex justify-center text-center content-around pt-2 px-1">
+  <div class="bg-gray-200 w-1/3 sm:w-full mx-2 mt-2">First third</div>
+  <div class="bg-gray-300 w-1/3 sm:w-full mx-2 mt-2">Second third</div>
+  <div class="bg-gray-200 w-1/3 sm:w-full mx-2 mt-2">Last third</div>
+</div>
+<div class="bg-gray-400 w-full h-48 flex justify-center text-center content-around pt-2 px-1">
+  <div class="bg-gray-200 w-1/2 mx-2 mt-2">First half</div>
+  <div class="bg-gray-300 w-1/2 mx-2 mt-2">Second half</div>
+</div>

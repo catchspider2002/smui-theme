@@ -7,8 +7,11 @@
   import Tabs from "./Tabs.svelte";
   import ButtonComponents from "./ButtonComponents.svelte";
   import Dashboard from "./Dashboard.svelte";
+  import Fab from "./Fab.svelte";
+  import Chart from "./Chart.svelte";
 </script>
 
 <div class="mdc-theme--background">
   <Dashboard/>
+  <!-- <Chart /> -->
 </div>
