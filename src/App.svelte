@@ -8,10 +8,12 @@
   import ButtonComponents from "./ButtonComponents.svelte";
   import Dashboard from "./Dashboard.svelte";
   import Fab from "./Fab.svelte";
-  import Chart from "./Chart.svelte";
+  import Chart from "./Chart2.svelte";
+  import Timeline from "./Timeline.svelte";
 </script>
 
-<div class="mdc-theme--background">
-  <Dashboard/>
+<div class="bg-gray-800">
+  <!-- <Dashboard/> -->
   <!-- <Chart /> -->
+  <Timeline />
 </div>
