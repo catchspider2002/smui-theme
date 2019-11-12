@@ -38,7 +38,7 @@
       title: "5. Area",
       type: "line",
       colors: ["green", "#4caf50"],
-      height: 200,
+      height: 150,
       isNavigable: 0,
       valuesOverPoints: 0,
       barOptions: {
@@ -65,16 +65,5 @@
     // var el = document.querySelector(".frappe-chart.line-chart").setAttribute("transform", "translate(0,0)");;
   });
 </script>
-
-<style>
-  .chart :global(div) {
-    font: 12px sans-serif;
-    /* background-color: steelblue; */
-    /* text-align: right; */
-    padding: 3px;
-    margin: 1px;
-    color: red;
-  }
-</style>
 
 <div bind:this={el} class="chart" />

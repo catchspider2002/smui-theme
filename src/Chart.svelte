@@ -2,7 +2,7 @@
   import { onMount } from "svelte";
   import { Chart } from "frappe-charts/dist/frappe-charts.esm.js";
   // import css
-  // import "frappe-charts/dist/frappe-charts.min.css";
+  import "frappe-charts/dist/frappe-charts.min.css";
 
   const data = {
     labels: [
@@ -63,16 +63,5 @@
     });
   });
 </script>
-
-<style>
-  .chart :global(div) {
-    font: 12px sans-serif;
-    /* background-color: steelblue; */
-    /* text-align: right; */
-    padding: 3px;
-    margin: 1px;
-    color: red;
-  }
-</style>
 
 <div bind:this={el} class="chart" />

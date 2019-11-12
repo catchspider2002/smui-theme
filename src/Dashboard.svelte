@@ -1,4 +1,6 @@
 <script>
+  import ChartLine from "./ChartLine.svelte";
+
   import Select, { Option } from "@smui/select";
   import Icon from "@smui/select/icon/index";
   import HelperText from "@smui/select/helper-text/index";
@@ -108,7 +110,9 @@
 	</div>
 </div>
 <div class="bg-gray-400 w-full h-64 flex flex-wrap text-center px-2">
-  <div class="bg-gray-200 w-full lg:flex-1 m-2 rounded">First third</div>
+  <div class="bg-gray-200 w-full lg:flex-1 m-2 rounded">
+  <ChartLine/>
+  </div>
   <div class="bg-gray-200 w-full lg:flex-1 m-2 rounded">Second third</div>
   <div class="bg-gray-200 w-full lg:flex-1 m-2 rounded">Third third</div>
 </div>
