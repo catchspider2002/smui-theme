@@ -8,13 +8,19 @@
   import ButtonComponents from "./ButtonComponents.svelte";
   import Dashboard from "./Dashboard.svelte";
   import Fab from "./Fab.svelte";
-  import Chart from "./Chart2.svelte";
   import ChartLine from "./ChartLine.svelte";
   import Timeline from "./Timeline.svelte";
 </script>
 
-<div class="bg-gray-200">
-  <Dashboard/>
-  <!-- <ChartLine /> -->
+<style>
+  .fontster {
+    background: #222428;
+    font-family: "Oswald", sans-serif;
+  }
+</style>
+
+<div class="bg-gray-200 fontster">
+  <Dashboard />
+  <!-- <Chart /> -->
   <!-- <Timeline /> -->
 </div>

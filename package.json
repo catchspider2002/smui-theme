@@ -4,7 +4,7 @@
   "devDependencies": {
     "@material/typography": "^3.1.0",
     "@smui/button": "^1.0.0-beta.17",
-    "rollup": "^1.26.3",
+    "rollup": "^1.27.0",
     "rollup-plugin-commonjs": "^10.1.0",
     "rollup-plugin-livereload": "^1.0.4",
     "rollup-plugin-node-resolve": "^5.2.0",
@@ -12,11 +12,11 @@
     "rollup-plugin-svelte": "^5.1.1",
     "rollup-plugin-terser": "^5.1.2",
     "sass": "^1.23.3",
-    "svelte": "^3.12.1",
+    "svelte": "^3.14.1",
     "svelte-material-ui": "^1.0.0-beta.17"
   },
   "dependencies": {
-    "frappe-charts": "^1.3.0",
+    "chart.js": "^2.9.2",
     "sirv-cli": "^0.4.5"
   },
   "scripts": {

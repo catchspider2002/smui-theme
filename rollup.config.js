@@ -24,7 +24,10 @@ export default {
             // a separate file — better for performance
             css: css => {
                 css.write("public/bundle.css");
-            }
+            },
+
+            // Emit CSS as "files" for other plugins to process
+            emitCss: true,
         }),
 
         // If you have external dependencies installed from

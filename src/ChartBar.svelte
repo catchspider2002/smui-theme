@@ -1,12 +1,10 @@
 <script>
   import { onMount, afterUpdate } from "svelte";
 
-  function createLineChart() {
-    // Chart.defaults.global.animationSteps = 50;
-    // Chart.defaults.global.responsive = true;
-    var ctx = document.getElementById("lineChart").getContext("2d");
+  function createBarChart() {
+    var ctx = document.getElementById("barChart").getContext("2d");
     var myChart = new Chart(ctx, {
-      type: "line",
+      type: "bar",
       data: {
         labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
         datasets: [
@@ -34,18 +32,6 @@
         ]
       },
       options: {
-        segmentShowStroke: true,
-        segmentStrokeColor: "#fff",
-        segmentStrokeWidth: 2,
-        percentageInnerCutout: 50,
-        animationSteps: 100,
-        animationEasing: "easeOutBounce",
-        animateRotate: true,
-        animateScale: false,
-        responsive: true,
-        maintainAspectRatio: true,
-        showScale: true,
-        animateScale: true,
         scales: {
           yAxes: [
             {
@@ -59,7 +45,7 @@
     });
   }
 
-  afterUpdate(createLineChart);
+  afterUpdate(createBarChart);
 </script>
 
-<canvas id="lineChart" width="3" height="1" />
+<canvas id="barChart" width="3" height="1" />
