@@ -1,20 +1,18 @@
 <script>
   import { onMount, afterUpdate } from "svelte";
 
-  function createLineChart() {
+  function createPieChart() {
     // Chart.defaults.global.animationSteps = 50;
     // Chart.defaults.global.responsive = true;
-    var ctx = document.getElementById("lineChart").getContext("2d");
+    var ctx = document.getElementById("pieChart").getContext("2d");
     var myChart = new Chart(ctx, {
-      type: "line",
+      type: "pie",
       data: {
         labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
         datasets: [
           {
             label: "# of Votes",
             data: [12, 19, 3, 5, 2, 3],
-            lineTension: 0,
-            fill: false,
             backgroundColor: [
               "rgba(255, 99, 132, 0.2)",
               "rgba(54, 162, 235, 0.2)",
@@ -61,7 +59,7 @@
     });
   }
 
-  afterUpdate(createLineChart);
+  afterUpdate(createPieChart);
 </script>
 
-<canvas id="lineChart" width="3" height="1" />
+<canvas id="pieChart" width="3" height="1" />
