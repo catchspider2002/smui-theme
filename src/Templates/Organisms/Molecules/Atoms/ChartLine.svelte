@@ -52,13 +52,33 @@
           yAxes: [
             {
               ticks: {
-                beginAtZero: true
+                beginAtZero: true,
+                // fontColor: "red",
+                // fontFamily: "'IBM Plex Sans', sans-serif"
+              }
+            }
+          ],
+          xAxes: [
+            {
+              ticks: {
+                // fontColor: "red",
+                // fontFamily: "'IBM Plex Sans', sans-serif"
+                display: false
               }
             }
           ]
+        },
+        legend: {
+          labels: {
+            // This more specific font property overrides the global property
+            // fontColor: "red",
+            fontFamily: "'IBM Plex Sans', sans-serif"
+          }
         }
       }
     });
+    Chart.defaults.global.defaultFontColor = "red";
+    Chart.defaults.global.defaultFontFamily = "'IBM Plex Sans', sans-serif";
   }
 
   afterUpdate(createLineChart);

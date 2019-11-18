@@ -8,14 +8,13 @@
   import ButtonComponents from "./ButtonComponents.svelte";
   import Dashboard from "./Dashboard.svelte";
   import Fab from "./Fab.svelte";
-  import ChartLine from "./ChartLine.svelte";
   import Timeline from "./Timeline.svelte";
 </script>
 
 <style>
   .fontster {
     background: #222428;
-    font-family: "Oswald", sans-serif;
+    font-family: "IBM Plex Sans", sans-serif;
   }
 </style>
 

@@ -1,12 +1,12 @@
 <script>
-  import ChartBar from "./ChartBar.svelte";
-  import ChartBarStacked from "./ChartBarStacked.svelte";
-  import ChartLine from "./ChartLine.svelte";
-  import ChartArea from "./ChartArea.svelte";
-  import ChartDonut from "./ChartDonut.svelte";
-  import ChartPie from "./ChartPie.svelte";
+  import ChartBar from "./Templates/Organisms/Molecules/Atoms/ChartBar.svelte";
+  import ChartBarStacked from "./Templates/Organisms/Molecules/Atoms/ChartBarStacked.svelte";
+  import ChartLine from "./Templates/Organisms/Molecules/Atoms/ChartLine.svelte";
+  import ChartArea from "./Templates/Organisms/Molecules/Atoms/ChartArea.svelte";
+  import ChartDonut from "./Templates/Organisms/Molecules/Atoms/ChartDonut.svelte";
+  import ChartPie from "./Templates/Organisms/Molecules/Atoms/ChartPie.svelte";
 
-  import Timeline from "./Timeline.svelte";
+  // import Timeline from "./Timeline.svelte";
   import Chart from "chart.js";
 </script>
 
@@ -24,7 +24,7 @@
     </div>
   </div>
   <div class="bg-gray-400 flex w-full lg:flex-1">
-    <div class="bg-gray-200 flex-1 m-2 border-t-4 border-blue-400 rounded">
+    <div class="bg-gray-700 flex-1 m-2 border-t-4 border-blue-400 rounded">
       <ChartBar />
     </div>
     <div class="bg-gray-200 flex-1 m-2 border-t-4 border-purple-400 rounded">

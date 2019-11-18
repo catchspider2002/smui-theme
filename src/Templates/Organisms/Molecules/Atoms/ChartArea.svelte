@@ -50,7 +50,21 @@
           yAxes: [
             {
               ticks: {
-                beginAtZero: true
+                beginAtZero: true,
+                display: false
+              },
+              gridLines: {
+                display: false
+              }
+            }
+          ],
+          xAxes: [
+            {
+              ticks: {
+                display: false
+              },
+              gridLines: {
+                display: false
               }
             }
           ]
