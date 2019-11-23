@@ -2,8 +2,6 @@
   import { onMount, afterUpdate } from "svelte";
 
   function createAreaChart() {
-    // Chart.defaults.global.animationSteps = 50;
-    // Chart.defaults.global.responsive = true;
     var ctx = document.getElementById("areaChart").getContext("2d");
     var myChart = new Chart(ctx, {
       type: "line",
@@ -43,7 +41,7 @@
         animateRotate: true,
         animateScale: false,
         responsive: true,
-        maintainAspectRatio: true,
+        maintainAspectRatio: false,
         showScale: true,
         animateScale: true,
         scales: {
@@ -76,4 +74,4 @@
   afterUpdate(createAreaChart);
 </script>
 
-<canvas id="areaChart" width="3" height="1" />
+<canvas id="areaChart" width="1" height="1" />

@@ -2,8 +2,6 @@
   import { onMount, afterUpdate } from "svelte";
 
   function createDonutChart() {
-    // Chart.defaults.global.animationSteps = 50;
-    // Chart.defaults.global.responsive = true;
     var ctx = document.getElementById("donutChart").getContext("2d");
     var myChart = new Chart(ctx, {
       type: "doughnut",
@@ -43,7 +41,7 @@
         animateRotate: true,
         animateScale: false,
         responsive: true,
-        maintainAspectRatio: true,
+        maintainAspectRatio: false,
         showScale: true,
         animateScale: true,
         scales: {

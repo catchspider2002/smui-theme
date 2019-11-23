@@ -46,7 +46,10 @@
               stacked: true
             }
           ]
-        }
+        },
+        animationSteps: 100,
+        responsive: true,
+        maintainAspectRatio: false
       }
     });
   }
@@ -54,4 +57,4 @@
   afterUpdate(createStackedBarChart);
 </script>
 
-<canvas id="stackedBarChart" width="3" height="1" />
+<canvas id="stackedBarChart" width="1" height="1" />

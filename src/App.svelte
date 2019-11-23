@@ -12,9 +12,10 @@
 </script>
 
 <style>
+
   .fontster {
     background: #222428;
-    font-family: "IBM Plex Sans", sans-serif;
+    font-family: "Varela Round", sans-serif;
   }
 </style>
 

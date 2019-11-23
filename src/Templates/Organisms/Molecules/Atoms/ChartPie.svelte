@@ -2,8 +2,6 @@
   import { onMount, afterUpdate } from "svelte";
 
   function createPieChart() {
-    // Chart.defaults.global.animationSteps = 50;
-    // Chart.defaults.global.responsive = true;
     var ctx = document.getElementById("pieChart").getContext("2d");
     var myChart = new Chart(ctx, {
       type: "pie",
@@ -43,7 +41,7 @@
         animateRotate: true,
         animateScale: false,
         responsive: true,
-        maintainAspectRatio: true,
+        maintainAspectRatio: false,
         showScale: true,
         animateScale: true,
         scales: {
@@ -62,4 +60,4 @@
   afterUpdate(createPieChart);
 </script>
 
-<canvas id="pieChart" width="3" height="1" />
+<canvas id="pieChart" width="1" height="1" />
