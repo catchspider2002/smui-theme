@@ -1,10 +1,18 @@
 <script>
   import { onMount, afterUpdate } from "svelte";
+  export let type = "pie",
+    hideXGrid,
+    hideYGrid,
+    hideXLabel,
+    hideYLabel,
+    hideLegend;
+  export let lineColor, borderColor, backgroundColor, labelColor, gridColor;
+  let chartId = "random" + Math.floor(Math.random() * 10000 + 1);
 
   function createPieChart() {
-    var ctx = document.getElementById("pieChart").getContext("2d");
+    var ctx = document.getElementById(chartId).getContext("2d");
     var myChart = new Chart(ctx, {
-      type: "pie",
+      type: type,
       data: {
         labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
         datasets: [
@@ -12,22 +20,15 @@
             label: "# of Votes",
             data: [12, 19, 3, 5, 2, 3],
             backgroundColor: [
-              "rgba(255, 99, 132, 0.2)",
-              "rgba(54, 162, 235, 0.2)",
-              "rgba(255, 206, 86, 0.2)",
-              "rgba(75, 192, 192, 0.2)",
-              "rgba(153, 102, 255, 0.2)",
-              "rgba(255, 159, 64, 0.2)"
+              "#38a169",
+              "#e53e3e",
+              "#d69e2e",
+              "#319795",
+              "#3182ce",
+              "#805ad5"
             ],
-            borderColor: [
-              "rgba(255, 99, 132, 1)",
-              "rgba(54, 162, 235, 1)",
-              "rgba(255, 206, 86, 1)",
-              "rgba(75, 192, 192, 1)",
-              "rgba(153, 102, 255, 1)",
-              "rgba(255, 159, 64, 1)"
-            ],
-            borderWidth: 1
+            borderColor: borderColor,
+            borderWidth: 3
           }
         ]
       },
@@ -44,14 +45,41 @@
         maintainAspectRatio: false,
         showScale: true,
         animateScale: true,
+        // cutoutPercentage: 90,
         scales: {
           yAxes: [
             {
               ticks: {
-                beginAtZero: true
+                beginAtZero: true,
+                fontColor: labelColor,
+                display: hideYLabel ? false : true
+              },
+              gridLines: {
+                display: hideYGrid ? false : true,
+                color: gridColor
+              }
+            }
+          ],
+          xAxes: [
+            {
+              ticks: {
+                fontColor: labelColor,
+                display: hideXLabel ? false : true
+              },
+              gridLines: {
+                display: hideXGrid ? false : true,
+                color: gridColor,
+                zeroLineColor: gridColor
               }
             }
           ]
+        },
+        legend: {
+          labels: {
+            fontColor: labelColor,
+            display: hideLegend ? false : true
+          },
+          display: false
         }
       }
     });
@@ -60,4 +88,4 @@
   afterUpdate(createPieChart);
 </script>
 
-<canvas id="pieChart" width="1" height="1" />
+<canvas id={chartId} width="1" height="1" />
