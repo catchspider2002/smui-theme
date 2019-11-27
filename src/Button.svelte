@@ -2,6 +2,7 @@
   import Button, { Group, GroupItem, Label, Icon } from "@smui/button";
   import Menu from "@smui/menu";
   import List, { Item, Separator, Text } from "@smui/list";
+  import IconButton from "@smui/icon-button";
 
   let clicked = 0;
   let menu;
@@ -28,6 +29,7 @@
 
 <section>
   <div class="font-bold text-sm">Button</div>
+      <IconButton class="material-icons">menu</IconButton>
 
   <div>
     <Button on:click={() => clicked++}>

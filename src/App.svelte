@@ -6,6 +6,7 @@
   import Textfield from "./Textfield.svelte";
   import Tabs from "./Tabs.svelte";
   import ButtonComponents from "./ButtonComponents.svelte";
+  import Button from "./Button.svelte";
   import Dashboard from "./Dashboard.svelte";
   import Fab from "./Fab.svelte";
   import Timeline from "./Timeline.svelte";
@@ -20,6 +21,7 @@
 </style>
 
 <div class="bg-gray-200 fontster">
+<!-- <Button/> -->
   <Dashboard />
   <!-- <Chart /> -->
   <!-- <Timeline /> -->
