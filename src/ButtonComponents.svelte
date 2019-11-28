@@ -20,37 +20,46 @@
   * :global(.smui-button__group .mdc-button) {
     margin-bottom: 0;
   }
-
-  /* * :global(.mdc-button) {
-      border-radius: 9999px;    
-  } */
 </style>
 
 <svelte:head>
-  <title>Button - SMUI</title>
+  <title>Buttons</title>
 </svelte:head>
 
 <section>
-  <div class="font-bold text-sm">Button</div>
+  Contained Buttons
+  <Button on:click={() => clicked++} variant="raised">
+    <Label>PRIMARY</Label>
+  </Button>
+  <Button color="secondary" on:click={() => clicked++} variant="raised">
+    <Label>SECONDARY</Label>
+  </Button>
+  Text
+  <Button on:click={() => clicked++}>
+    <Label>Default</Label>
+  </Button>
+  <Button color="secondary" on:click={() => clicked++}>
+    <Label>Default</Label>
+  </Button>
+  Outlined Buttons
+  <Button on:click={() => clicked++} variant="outlined">
+    <Label>Outlined</Label>
+  </Button>
+  <Button on:click={() => clicked++} variant="outlined">
+    <Label>Outlined</Label>
+    <Icon class="material-icons">favorite</Icon>
+  </Button>
 
+  <div class="font-bold text-sm">Button</div>
   <div>
-    <Button on:click={() => clicked++}>
-      <Label>Default</Label>
-    </Button>
     <Button on:click={() => clicked++} disabled>
       <Label>Disabled</Label>
     </Button>
     <Button on:click={() => clicked++} ripple={false}>
       <Label>No Ripple</Label>
     </Button>
-    <Button on:click={() => clicked++} variant="raised">
-      <Label>Raised</Label>
-    </Button>
     <Button on:click={() => clicked++} variant="unelevated">
       <Label>Unelevated</Label>
-    </Button>
-    <Button on:click={() => clicked++} variant="outlined">
-      <Label>Outlined</Label>
     </Button>
     <Button on:click={() => clicked++} dense>
       <Label>Dense</Label>
@@ -69,7 +78,10 @@
       <Label>Trailing Icon</Label>
       <Icon class="material-icons">favorite</Icon>
     </Button>
-    <Button on:click={() => clicked++} variant="raised" class="mdc-button-rounded">
+    <Button
+      on:click={() => clicked++}
+      variant="raised"
+      class="mdc-button-rounded">
       <Label>Outlined</Label>
       <Icon class="material-icons">favorite</Icon>
     </Button>
@@ -86,10 +98,6 @@
       <Label>Outlined</Label>
     </Button>
     <Button on:click={() => clicked++} variant="outlined">
-      <Label>Outlined</Label>
-      <Icon class="material-icons">favorite</Icon>
-    </Button>
-    <Button on:click={() => clicked++} variant="outlined">
       <Icon class="material-icons">favorite</Icon>
       <Label>Outlined</Label>
     </Button>
@@ -98,17 +106,11 @@
   <div>
     Secondary color:
     <br />
-    <Button color="secondary" on:click={() => clicked++}>
-      <Label>Default</Label>
-    </Button>
     <Button color="secondary" on:click={() => clicked++} disabled>
       <Label>Disabled</Label>
     </Button>
     <Button color="secondary" on:click={() => clicked++} ripple={false}>
       <Label>No Ripple</Label>
-    </Button>
-    <Button color="secondary" on:click={() => clicked++} variant="raised">
-      <Label>Raised</Label>
     </Button>
     <Button color="secondary" on:click={() => clicked++} variant="unelevated">
       <Label>Unelevated</Label>

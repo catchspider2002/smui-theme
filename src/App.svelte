@@ -6,7 +6,6 @@
   import Textfield from "./Textfield.svelte";
   import Tabs from "./Tabs.svelte";
   import ButtonComponents from "./ButtonComponents.svelte";
-  import Button from "./Button.svelte";
   import Dashboard from "./Dashboard.svelte";
   import Fab from "./Fab.svelte";
   import Timeline from "./Timeline.svelte";
@@ -15,14 +14,13 @@
 <style>
 
   .fontster {
-    background: #222428;
     font-family: "Varela Round", sans-serif;
   }
 </style>
 
 <div class="bg-gray-200 fontster">
-<!-- <Button/> -->
-  <Dashboard />
+<ButtonComponents/>
+  <!-- <Dashboard /> -->
   <!-- <Chart /> -->
   <!-- <Timeline /> -->
 </div>
