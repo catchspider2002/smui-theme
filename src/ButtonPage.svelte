@@ -28,38 +28,98 @@
 
 <section>
   Contained Buttons
-  <Button on:click={() => clicked++} variant="raised">
+  <br />
+  <Button on:click={() => clicked++} variant="unelevated">
     <Label>PRIMARY</Label>
   </Button>
-  <Button color="secondary" on:click={() => clicked++} variant="raised">
+  <Button color="secondary" on:click={() => clicked++} variant="unelevated">
     <Label>SECONDARY</Label>
   </Button>
-  Text
+  <Button on:click={() => clicked++} variant="raised">
+    <Label>RAISED</Label>
+  </Button>
+  <Button color="secondary" on:click={() => clicked++} variant="raised">
+    <Label>RAISED</Label>
+  </Button>
+  <Button on:click={() => clicked++} variant="unelevated" disabled>
+    <Label>Disabled</Label>
+  </Button>
+  <br />
+  Outlined Buttons
+  <br />
+  <Button on:click={() => clicked++} variant="outlined">
+    <Label>Outlined</Label>
+  </Button>
+  <Button color="secondary" on:click={() => clicked++} variant="outlined">
+    <Label>Outlined</Label>
+  </Button>
+  <Button on:click={() => clicked++} variant="outlined" disabled>
+    <Label>Disabled</Label>
+  </Button>
+  <br />
+  Text Buttons
+  <br />
   <Button on:click={() => clicked++}>
     <Label>Default</Label>
   </Button>
   <Button color="secondary" on:click={() => clicked++}>
     <Label>Default</Label>
   </Button>
-  Outlined Buttons
+  <Button on:click={() => clicked++} disabled>
+    <Label>Disabled</Label>
+  </Button>
+  <br />
+  Buttons with icons
+  <br />
+  <Button on:click={() => clicked++} variant="unelevated">
+    <Label>Unelevated</Label>
+    <Icon class="material-icons">favorite</Icon>
+  </Button>
+  <Button on:click={() => clicked++} variant="unelevated">
+    <Icon class="material-icons">favorite</Icon>
+    <Label>Unelevated</Label>
+  </Button>
+  <Button on:click={() => clicked++} variant="raised">
+    <Label>Raised</Label>
+    <Icon class="material-icons">favorite</Icon>
+  </Button>
+  <Button on:click={() => clicked++} variant="raised">
+    <Icon class="material-icons">favorite</Icon>
+    <Label>Raised</Label>
+  </Button>
+  <br />
   <Button on:click={() => clicked++} variant="outlined">
+    <Icon class="material-icons">favorite</Icon>
     <Label>Outlined</Label>
   </Button>
   <Button on:click={() => clicked++} variant="outlined">
     <Label>Outlined</Label>
     <Icon class="material-icons">favorite</Icon>
   </Button>
+  <br />
+  <Button on:click={() => clicked++}>
+    <Icon class="material-icons">favorite</Icon>
+    <Label>Leading Icon</Label>
+  </Button>
+  <Button on:click={() => clicked++}>
+    <Label>Trailing Icon</Label>
+    <Icon class="material-icons">favorite</Icon>
+  </Button>
+  <Button color="secondary" on:click={() => clicked++}>
+    <Icon class="material-icons">favorite</Icon>
+    <Label>Leading Icon</Label>
+  </Button>
+  <Button color="secondary" on:click={() => clicked++}>
+    <Label>Trailing Icon</Label>
+    <Icon class="material-icons">favorite</Icon>
+  </Button>
 
-  <div class="font-bold text-sm">Button</div>
+  <br />
+  Variations
+  <br />
   <div>
-    <Button on:click={() => clicked++} disabled>
-      <Label>Disabled</Label>
-    </Button>
     <Button on:click={() => clicked++} ripple={false}>
       <Label>No Ripple</Label>
-    </Button>
-    <Button on:click={() => clicked++} variant="unelevated">
-      <Label>Unelevated</Label>
     </Button>
     <Button on:click={() => clicked++} dense>
       <Label>Dense</Label>
@@ -67,56 +127,9 @@
     <Button on:click={() => clicked++} class="myClass">
       <Label>With a Class</Label>
     </Button>
-  </div>
-
-  <div>
-    <Button on:click={() => clicked++}>
-      <Icon class="material-icons">favorite</Icon>
-      <Label>Icon</Label>
-    </Button>
-    <Button on:click={() => clicked++}>
-      <Label>Trailing Icon</Label>
-      <Icon class="material-icons">favorite</Icon>
-    </Button>
-    <Button
-      on:click={() => clicked++}
-      variant="raised"
-      class="mdc-button-rounded">
-      <Label>Outlined</Label>
-      <Icon class="material-icons">favorite</Icon>
-    </Button>
-    <Button on:click={() => clicked++} variant="raised">
-      <Icon class="material-icons">favorite</Icon>
-      <Label>Outlined</Label>
-    </Button>
-    <Button on:click={() => clicked++} variant="unelevated">
-      <Label>Outlined</Label>
-      <Icon class="material-icons">favorite</Icon>
-    </Button>
-    <Button on:click={() => clicked++} variant="unelevated">
-      <Icon class="material-icons">favorite</Icon>
-      <Label>Outlined</Label>
-    </Button>
-    <Button on:click={() => clicked++} variant="outlined">
-      <Icon class="material-icons">favorite</Icon>
-      <Label>Outlined</Label>
-    </Button>
-  </div>
-
-  <div>
-    Secondary color:
     <br />
-    <Button color="secondary" on:click={() => clicked++} disabled>
-      <Label>Disabled</Label>
-    </Button>
     <Button color="secondary" on:click={() => clicked++} ripple={false}>
       <Label>No Ripple</Label>
-    </Button>
-    <Button color="secondary" on:click={() => clicked++} variant="unelevated">
-      <Label>Unelevated</Label>
-    </Button>
-    <Button color="secondary" on:click={() => clicked++} variant="outlined">
-      <Label>Outlined</Label>
     </Button>
     <Button color="secondary" on:click={() => clicked++} dense>
       <Label>Dense</Label>
@@ -127,27 +140,16 @@
   </div>
 
   <div>
-    <Button color="secondary" on:click={() => clicked++}>
-      <Icon class="material-icons">favorite</Icon>
-      <Label>Icon</Label>
-    </Button>
-    <Button color="secondary" on:click={() => clicked++}>
-      <Label>Trailing Icon</Label>
-      <Icon class="material-icons">favorite</Icon>
-    </Button>
-  </div>
-
-  <div>
-    Button groups:
+    Button groups
     <br />
-    <Group>
-      <Button on:click={() => clicked++}>
+    <Group variant="unelevated">
+      <Button on:click={() => clicked++} variant="unelevated">
         <Label>One</Label>
       </Button>
-      <Button on:click={() => clicked++}>
+      <Button on:click={() => clicked++} variant="unelevated">
         <Label>Two</Label>
       </Button>
-      <Button on:click={() => clicked++}>
+      <Button on:click={() => clicked++} variant="unelevated">
         <Label>Three</Label>
       </Button>
     </Group>
@@ -162,17 +164,6 @@
         <Label>Three</Label>
       </Button>
     </Group>
-    <Group variant="unelevated">
-      <Button on:click={() => clicked++} variant="unelevated">
-        <Label>One</Label>
-      </Button>
-      <Button on:click={() => clicked++} variant="unelevated">
-        <Label>Two</Label>
-      </Button>
-      <Button on:click={() => clicked++} variant="unelevated">
-        <Label>Three</Label>
-      </Button>
-    </Group>
     <Group variant="outlined">
       <Button on:click={() => clicked++} variant="outlined">
         <Label>One</Label>
@@ -181,6 +172,17 @@
         <Label>Two</Label>
       </Button>
       <Button on:click={() => clicked++} variant="outlined">
+        <Label>Three</Label>
+      </Button>
+    </Group>
+    <Group>
+      <Button on:click={() => clicked++}>
+        <Label>One</Label>
+      </Button>
+      <Button on:click={() => clicked++}>
+        <Label>Two</Label>
+      </Button>
+      <Button on:click={() => clicked++}>
         <Label>Three</Label>
       </Button>
     </Group>
@@ -214,7 +216,7 @@
   </div>
 
   <div>
-    Split buttons using a button group:
+    Split buttons using a button group
     <br />
     <Group variant="raised">
       <Button on:click={() => clicked++} variant="raised">

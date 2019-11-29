@@ -1,13 +1,13 @@
 <script>
   import ChartLine from "./Templates/Organisms/Molecules/Atoms/ChartLine.svelte";
 
-  // import Timeline from "./Timeline.sveltef<<";
+  // import Timeline from "./Timeline.svelte;
   import Chart from "chart.js";
 </script>
 
 <style>
   .bg-dark-grad {
-    background-image: linear-gradient(to right, #3182ce, #2b6cb0);
+    background-image: linear-gradient(to right, #2b6cb0, #3182ce);
   }
   .bg-light-grad {
     background-image: linear-gradient(to right, #ed64a6, #d53f8c);
@@ -16,7 +16,7 @@
 
 <div class="bg-gray-400 w-full h-64 flex flex-wrap text-center px-2">
   <div class="bg-gray-400 flex w-full lg:flex-1">
-    <div class="bg-gray-200 w-1/2 m-2 border-t-4 border-green-400 rounded" />
+    <div class="bg-light-grad w-1/2 m-2 border-t-4 border-green-400 rounded" />
     <div class="bg-gray-800 w-1/2 m-2 border-t-4 border-red-500 rounded">
       <ChartLine
         type="bar"
@@ -70,6 +70,7 @@
     <ChartLine
       type="line"
       lineColor="#ffffff"
+      pointColor="#ffffff"
       showXLabel={true}
       showYLabel={true}
       showXGrid={true}
@@ -106,13 +107,13 @@
   </div>
   <div class="bg-gray-800 w-full lg:flex-1 m-2 rounded">
     <ChartLine
-      type="bar"
+      type="horizontalBar"
       lineColor="#38a169"
       showXLabel={true}
       showYLabel={true}
       showXGrid={true}
       showYGrid={true}
-      beginYZero={true} />
+      beginXZero={true} />
   </div>
   <div class="bg-gray-100 w-full lg:flex-1 m-2 rounded">
     <ChartLine

@@ -1,8 +1,36 @@
 @import "@material/theme/color-palette";
 
+:root {
+    --primary-color: rgb(255, 152, 0);
+    --secondary-color: rgb(33, 150, 243);
+    --font-color: #424242;
+    --bg-color: #fff;
+    --heading-color: #292922;
+}
+
+[data-theme="dark"] {
+    --primary-color: #9a97f3;
+    --secondary-color: #818cab;
+    --font-color: #e1e1ff;
+    --bg-color: #161625;
+    --heading-color: #818cab;
+}
+
+body {
+    --mdc-theme-primary: var(--primary-color);
+    --mdc-theme-secondary: var(--secondary-color);
+    --duration: 0.5s;
+    --timing: ease;
+    background-color: var(--bg-color);
+    color: var(--font-color);
+    transition: color var(--duration) var(--timing), background-color var(--duration) var(--timing);
+}
+
 // Svelte Colors!
-$mdc-theme-primary: #ff3e00;
-$mdc-theme-secondary: #676778;
+// $mdc-theme-primary: #25ad6e;
+// $mdc-theme-secondary: #6630e6;
+// $mdc-theme-on-primary: rgb(240, 240, 240);
+// $mdc-theme-on-secondary: rgb(240, 240, 240);
 // Other Svelte color: #40b3ff
 
 $mdc-theme-background: #fff;
@@ -10,7 +38,6 @@ $mdc-theme-surface: #fff;
 // $mdc-button-shape-radius: 999px;
 
 $mdc-theme-error: $material-color-red-900;
-
 
 // .frappe-chart .line-chart .axis,
 // .frappe-chart .title {

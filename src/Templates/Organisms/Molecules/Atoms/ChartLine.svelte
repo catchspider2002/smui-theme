@@ -8,36 +8,43 @@
     showLegend,
     beginXZero,
     beginYZero,
+    lineColor, // hex
+    pointColor, // hex
+    labelColor, // hex
+    gridColor, // hex
+    // Line
+    lineArea = false,
+    lineCurve = false,
+    pointRadius = 4,
+    lineThickness = 3,
+    // Bar
     barType,
+    barPercent = 30,
+    // Donut
     donutPercent = type == "doughnut" ? 50 : 0,
-    barPercent = 30;
-  export let lineArea = false,
-    lineCurve = false;
-  export let background,
-    lineColor,
-    pointColor,
-    backgroundColor,
-    labelColor,
-    gridColor,
-    borderColor;
-  let chartId = "random" + Math.floor(Math.random() * 10000 + 1);
+    //  Pie
+    pieSpacing = 3;
+
+  let chartId = "random" + Math.floor(Math.random() * 10000 + 1),
+    backgroundColor;
 
   // let themeColor = "#805ad5"; // purple-600
   // let themeColor = hexToHSL("38a169", 1);
 
   function createLineChart() {
-    backgroundColor = getComputedStyle(
-      document.getElementById(chartId).parentElement
-    ).backgroundColor;
-    if (RGBLuminance(backgroundColor) > 0.5) {
-      // if (background == "light") {
-      labelColor = "#000000";
-    } else {
-      labelColor = "#FFFFFF";
+    backgroundColor =
+      backgroundColor ||
+      getComputedStyle(document.getElementById(chartId).parentElement)
+        .backgroundColor;
+
+    if (!labelColor) {
+      if (RGBLuminance(backgroundColor) > 0.5) labelColor = "#000000";
+      else labelColor = "#FFFFFF";
     }
-    gridColor = hexToHSL(labelColor, 0.1);
+
+    gridColor = gridColor || hexToHSL(labelColor, 0.1);
     let newLabelColor = hexToHSL(labelColor, 0.9);
-    pointColor = backgroundColor;
+    pointColor = pointColor || backgroundColor;
 
     let dataset = [
       {
@@ -47,8 +54,8 @@
         fill: lineArea,
         backgroundColor: hexToHSL(lineColor, 0.2),
         borderColor: hexToHSL(lineColor, 1),
-        borderWidth: 3,
-        pointRadius: 4,
+        borderWidth: lineThickness,
+        pointRadius: pointRadius,
         pointBackgroundColor: pointColor
       }
     ];
@@ -94,7 +101,7 @@
             "#d000d5"
           ],
           borderColor: backgroundColor,
-          borderWidth: 3
+          borderWidth: pieSpacing
         }
       ];
     }
@@ -165,13 +172,12 @@
         }
       }
     });
-    Chart.defaults.global.defaultFontColor = "purple";
     Chart.defaults.global.defaultFontFamily = "'Varela Round', sans-serif";
   }
 
   afterUpdate(createLineChart);
 
-  function hexToHSL(hex, percent) {
+  const hexToHSL = (hex, percent) => {
     let result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
     if (result) {
       let r = parseInt(result[1], 16);
@@ -213,9 +219,9 @@
         ")";
       return HSL;
     }
-  }
+  };
 
-  function RGBToHex(rgb) {
+  const RGBToHex = rgb => {
     let sep = rgb.indexOf(",") > -1 ? "," : " ";
     // Turn "rgb(r,g,b)" into [r,g,b]
     rgb = rgb
@@ -232,9 +238,9 @@
     if (b.length == 1) b = "0" + b;
 
     return "#" + r + g + b;
-  }
+  };
 
-  function RGBLuminance(rgb) {
+  const RGBLuminance = rgb => {
     let sep = rgb.indexOf(",") > -1 ? "," : " ";
     rgb = rgb
       .substr(4)
@@ -243,7 +249,7 @@
     //sRGB Luma
     let luminance = (rgb[0] * 0.2126 + rgb[1] * 0.7152 + rgb[2] * 0.0722) / 255;
     return luminance;
-  }
+  };
 </script>
 
 <canvas id={chartId} width="1" height="1" />
