@@ -28,14 +28,21 @@
   }
 </script>
 
-<div class="{variantClass} {borderClass} pr-4 py-2 rounded relative flex items-center" role="alert">
+<style>
+
+</style>
+
+<div
+  class="{variantClass}
+  {borderClass} pr-4 py-2 rounded relative flex items-center"
+  role="alert">
   <Icon class="material-icons pl-4 py-1">check_circle</Icon>
   <div class="px-4">
     <div class="pt-1 font-bold">Alert Title</div>
     <div class="pt-1">Something seriously bad happened.</div>
   </div>
-	<span class="absolute top-0 bottom-0 right-0 px-4 py-3">
-            <IconButton class="material-icons" title="Dismiss">close</IconButton>
+  <span class="absolute top-0 bottom-0 right-0 px-4 py-3">
+    <IconButton class="material-icons" title="Dismiss">close</IconButton>
 
-	</span>
+  </span>
 </div>

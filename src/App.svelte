@@ -11,8 +11,13 @@
   import Dashboard from "./Dashboard.svelte";
   import Fab from "./Fab.svelte";
   import Timeline from "./Timeline.svelte";
-  import ButtonPage from "./ButtonPage.svelte";
-  import AlertPage from "./AlertPage.svelte";
+
+  import ButtonPage from "./ComponentPage/ButtonPage.svelte";
+  import AlertPage from "./ComponentPage/AlertPage.svelte";
+  import SwitchPage from "./ComponentPage/SwitchPage.svelte";
+  import CheckboxPage from "./ComponentPage/CheckboxPage.svelte";
+  import RadioPage from "./ComponentPage/RadioPage.svelte";
+  import SliderPage from "./ComponentPage/SliderPage.svelte";
 
   let initialOff, currentTheme;
 
@@ -33,11 +38,11 @@
 
 <style>
   .fontster {
-    font-family: "Varela Round", sans-serif;
+    font-family: "Montserrat", sans-serif;
   }
 </style>
 
-<div class="fontster">
+<div class="fontster p-4">
   <div style="display: flex; align-items: center;">
     <IconButton
       toggle
@@ -48,8 +53,14 @@
       <Icon class="material-icons text-yellow-400">wb_sunny</Icon>
     </IconButton>
   </div>
-  <ButtonPage />
-  <AlertPage />
+  <SliderPage/>
+  <SwitchPage />
+  <CheckboxPage />
+  <RadioPage />
+  <!-- <ButtonPage />
+  <AlertPage /> -->
   <!-- <Dashboard /> -->
   <!-- <Timeline /> -->
 </div>
+Select Textfield Text fields allow users to input, edit, and select text. 
+ Textarea

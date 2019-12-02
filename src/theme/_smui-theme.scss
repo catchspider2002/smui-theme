@@ -1,16 +1,28 @@
 @import "@material/theme/color-palette";
 
 :root {
-    --primary-color: rgb(255, 152, 0);
-    --secondary-color: rgb(33, 150, 243);
+    --primary-color: #0053aa;
+    --secondary-color: #ae4306;
+    --primary-font-color: #ffffff;
+    --secondary-font-color: #ffffff;
+    --primary-color-text: var(--primary-color);
+    --secondary-color-text: var(--secondary-color);
+    --disabled-button-bg-color: rgba(0, 0, 0, 0.12);
+    --disabled-button-color: rgba(0, 0, 0, 0.26);
     --font-color: #424242;
     --bg-color: #fff;
     --heading-color: #292922;
 }
 
 [data-theme="dark"] {
-    --primary-color: #9a97f3;
-    --secondary-color: #818cab;
+    --primary-color: #0053aa;
+    --secondary-color: #ae4306;
+    // --primary-font-color: #f7fafc;
+    // --secondary-font-color: #1a202c;
+    --primary-color-text: #0d87f2;
+    --secondary-color-text: #f2780d;
+    --disabled-button-bg-color: rgba(255, 255, 255, 0.12);
+    --disabled-button-color: rgba(255, 255, 255, 0.3);
     --font-color: #e1e1ff;
     --bg-color: #161625;
     --heading-color: #818cab;
@@ -19,6 +31,8 @@
 body {
     --mdc-theme-primary: var(--primary-color);
     --mdc-theme-secondary: var(--secondary-color);
+    --mdc-theme-on-primary: var(--primary-font-color);
+    --mdc-theme-on-secondary: var(--secondary-font-color);
     --duration: 0.5s;
     --timing: ease;
     background-color: var(--bg-color);
@@ -33,20 +47,33 @@ body {
 // $mdc-theme-on-secondary: rgb(240, 240, 240);
 // Other Svelte color: #40b3ff
 
+$mdc-typography-font-family: "Montserrat", sans-serif;
 $mdc-theme-background: #fff;
 $mdc-theme-surface: #fff;
 // $mdc-button-shape-radius: 999px;
 
 $mdc-theme-error: $material-color-red-900;
 
-// .frappe-chart .line-chart .axis,
-// .frappe-chart .title {
-//     display: none;
-// }
+// .mdc-button--raised:not(:disabled), .mdc-button--unelevated:not(:disabled) {
+.mdc-button--raised:disabled,
+.mdc-button--unelevated:disabled {
+    background-color: var(--disabled-button-bg-color, #383838);
+    color: var(--disabled-button-color, #5c5c5c);
+}
 
-// .frappe-chart {
-//     width: 2048px;
-// }
-// .frappe-chart .line-chart {
-//     transform: translate(0, 0);
-// }
+.mdc-button--outlined:disabled {
+    border-color: var(--disabled-button-color, #5c5c5c);
+}
+
+.mdc-button:disabled {
+    color: var(--disabled-button-color, #5c5c5c);
+}
+
+.smui-button--color-secondary.mdc-button--raised:not(:disabled), .smui-button--color-secondary.mdc-button--unelevated:not(:disabled) {
+    color: --primary-color-text;
+}
+
+.smui-button--color-secondary.mdc-button--raised:not(:disabled),
+.smui-button--color-secondary.mdc-button--unelevated:not(:disabled) {
+    color: --secondary-color-text;
+}

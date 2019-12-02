@@ -1,5 +1,5 @@
 <script>
-  import Alert from "./Templates/Organisms/Molecules/Atoms/Alert.svelte";
+  import Alert from "../Templates/Organisms/Molecules/Atoms/Alert.svelte";
 </script>
 
 <div class="p-4">
