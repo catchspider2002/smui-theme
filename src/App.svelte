@@ -18,6 +18,7 @@
   import CheckboxPage from "./ComponentPage/CheckboxPage.svelte";
   import RadioPage from "./ComponentPage/RadioPage.svelte";
   import SliderPage from "./ComponentPage/SliderPage.svelte";
+  import SelectPage from "./ComponentPage/SelectPage.svelte";
 
   let initialOff, currentTheme;
 
@@ -36,13 +37,7 @@
   };
 </script>
 
-<style>
-  .fontster {
-    font-family: "Montserrat", sans-serif;
-  }
-</style>
-
-<div class="fontster p-4">
+<div class="p-4">
   <div style="display: flex; align-items: center;">
     <IconButton
       toggle
@@ -53,7 +48,8 @@
       <Icon class="material-icons text-yellow-400">wb_sunny</Icon>
     </IconButton>
   </div>
-  <SliderPage/>
+  <SelectPage />
+  <SliderPage />
   <SwitchPage />
   <CheckboxPage />
   <RadioPage />
@@ -62,5 +58,3 @@
   <!-- <Dashboard /> -->
   <!-- <Timeline /> -->
 </div>
-Select Textfield Text fields allow users to input, edit, and select text. 
- Textarea

@@ -18,43 +18,28 @@
 </div>
 <div class="text-base font-semibold py-4">Usage</div>
 <div class="pb-2">
-
-  <!-- <FormField align="end" style="display: flex;">
-    <Slider bind:value />
-    <span
-      class="block"
-      slot="label"
-      style="padding-right: 12px; width: max-content;">
-      Amount of Wonder
-    </span>
-  </FormField> -->
-
-  <div class="flex">
-    <span class="block" style="padding-right: 12px; width: max-content;">
-      Amount of Wonder
-    </span>
-    <Slider bind:value />
+  <div class="flex items-center py-2">
+    <div class="flex-1-0-auto pr-4">Continuous Slider</div>
+    <Slider class="flex-auto" bind:value />
   </div>
-</div>
-<div class="text-base font-semibold py-4">Discrete with min/max/step</div>
-<div class="pb-2">
-  <Slider bind:value={value2} min={-10} max={10} step={2} discrete />
-</div>
-<div class="text-base font-semibold py-4">Non Discrete with min/max/step</div>
-<div class="pb-2">
-  <Slider bind:value={value2} min={-10} max={10} step={2} />
-</div>
-<div class="text-base font-semibold py-4">
-  Discrete with min/max/step and tick marks:
-</div>
-<div class="pb-2">
-  <Slider
-    bind:value={value3}
-    min={-10}
-    max={10}
-    step={2}
-    discrete
-    displayMarkers />
+  <div class="flex items-center py-2">
+    <div class="flex-1-0-auto pr-4">Discrete Slider</div>
+    <Slider bind:value={value2} min={-10} max={10} step={2} discrete />
+  </div>
+  <div class="flex items-center py-2">
+    <div class="flex-1-0-auto pr-4">Discrete with tick marks</div>
+    <Slider
+      bind:value={value3}
+      min={-10}
+      max={10}
+      step={2}
+      discrete
+      displayMarkers />
+  </div>
+  <div class="flex items-center py-2">
+    <div class="flex-1-0-auto pr-4">Disabled</div>
+    <Slider class="flex-auto" bind:value disabled />
+  </div>
 </div>
 <div class="text-base font-semibold py-4">Props</div>
 <div class="pb-2">Property Description Type Default (Ant Design)</div>

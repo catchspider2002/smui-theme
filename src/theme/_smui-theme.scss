@@ -12,6 +12,7 @@
     --font-color: #424242;
     --bg-color: #fff;
     --heading-color: #292922;
+    --font-family: "Montserrat", sans-serif;
 }
 
 [data-theme="dark"] {
@@ -38,16 +39,15 @@ body {
     background-color: var(--bg-color);
     color: var(--font-color);
     transition: color var(--duration) var(--timing), background-color var(--duration) var(--timing);
+    font-family: var(--font-family, "Montserrat", sans-serif);
 }
 
 // Svelte Colors!
 // $mdc-theme-primary: #25ad6e;
 // $mdc-theme-secondary: #6630e6;
-// $mdc-theme-on-primary: rgb(240, 240, 240);
-// $mdc-theme-on-secondary: rgb(240, 240, 240);
 // Other Svelte color: #40b3ff
 
-$mdc-typography-font-family: "Montserrat", sans-serif;
+$mdc-typography-font-family: var(--font-family, "Montserrat", sans-serif);
 $mdc-theme-background: #fff;
 $mdc-theme-surface: #fff;
 // $mdc-button-shape-radius: 999px;
@@ -69,11 +69,17 @@ $mdc-theme-error: $material-color-red-900;
     color: var(--disabled-button-color, #5c5c5c);
 }
 
-.smui-button--color-secondary.mdc-button--raised:not(:disabled), .smui-button--color-secondary.mdc-button--unelevated:not(:disabled) {
+.smui-button--color-secondary.mdc-button--raised:not(:disabled),
+.smui-button--color-secondary.mdc-button--unelevated:not(:disabled) {
     color: --primary-color-text;
 }
 
 .smui-button--color-secondary.mdc-button--raised:not(:disabled),
 .smui-button--color-secondary.mdc-button--unelevated:not(:disabled) {
     color: --secondary-color-text;
+}
+
+// Tailwind additions
+.flex-1-0-auto {
+    flex: 1 0 auto;
 }
