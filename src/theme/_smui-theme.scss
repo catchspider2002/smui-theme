@@ -1,8 +1,8 @@
 @import "@material/theme/color-palette";
 
 :root {
-    --primary-color: #0053aa;
-    --secondary-color: #ae4306;
+    --primary-color: #2b6cb0; // bg-blue-700
+    --secondary-color: #c53030; // bg-red-700
     --primary-font-color: #ffffff;
     --secondary-font-color: #ffffff;
     --primary-color-text: var(--primary-color);
@@ -16,12 +16,12 @@
 }
 
 [data-theme="dark"] {
-    --primary-color: #0053aa;
-    --secondary-color: #ae4306;
-    // --primary-font-color: #f7fafc;
-    // --secondary-font-color: #1a202c;
-    --primary-color-text: #0d87f2;
-    --secondary-color-text: #f2780d;
+    --primary-color: #63b3ed; // bg-blue-400
+    --secondary-color: #fc8181; // bg-red-400
+    --primary-font-color: #000000;
+    --secondary-font-color: #000000;
+    // --primary-color-text: #000000;
+    // --secondary-color-text: #000000;
     --disabled-button-bg-color: rgba(255, 255, 255, 0.12);
     --disabled-button-color: rgba(255, 255, 255, 0.3);
     --font-color: #e1e1ff;

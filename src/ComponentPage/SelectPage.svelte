@@ -60,8 +60,8 @@
   </span>
   <div slot="content">
     <Example>
-      <span slot="header">Usage</span>
-      <div slot="example" class="mr-8 mb-8">
+      <span slot="header">Usage1</span>
+      <div slot="horizontal" class="mr-8 mb-8">
         <Select bind:value={valuePrefilled} label="Native Input">
           <Option value="" />
           {#each fruits as fruit}
@@ -71,7 +71,7 @@
           {/each}
         </Select>
       </div>
-      <div slot="example" class="mb-8">
+      <div slot="horizontal" class="mb-8">
         <Select
           enhanced
           bind:value={valuePrefilledEnhanced}
@@ -89,7 +89,7 @@
     </Example>
     <Example>
       <span slot="header">Standard</span>
-      <div slot="example" class="mr-8 mb-8">
+      <div slot="horizontal" class="mr-8 mb-8">
         <Select bind:value={valueStandard} label="Fruit">
           <Option value="" />
           {#each fruits as fruit}
@@ -99,7 +99,7 @@
           {/each}
         </Select>
       </div>
-      <div slot="example" class="mr-8 mb-8">
+      <div slot="horizontal" class="mr-8 mb-8">
         <Select bind:value={valueStandardHelperText} label="With Helper Text">
           <Option value="" />
           {#each fruits as fruit}
@@ -110,7 +110,7 @@
         </Select>
         <HelperText>Helper text.</HelperText>
       </div>
-      <div slot="example" class="mr-8 mb-8">
+      <div slot="horizontal" class="mr-8 mb-8">
         <Select
           enhanced
           bind:value={valueStandardEnhanced}
@@ -125,7 +125,7 @@
           {/each}
         </Select>
       </div>
-      <div slot="example" class="mr-8 mb-8">
+      <div slot="horizontal" class="mr-8 mb-8">
         <Select
           withLeadingIcon
           bind:value={valueStandardLeadingIcon}
@@ -143,7 +143,7 @@
           {/each}
         </Select>
       </div>
-      <div slot="example" class="mr-8 mb-8">
+      <div slot="horizontal" class="mr-8 mb-8">
         <Select invalid bind:value={valueStandardInvalid} label="Invalid">
           <Option value="" />
           {#each fruits as fruit}
@@ -153,7 +153,7 @@
           {/each}
         </Select>
       </div>
-      <div slot="example" class="mb-8">
+      <div slot="horizontal" class="mb-8">
         <Select bind:value={valueStandardDisabled} disabled label="Disabled">
           <Option value="" />
           {#each fruits as fruit}
@@ -166,7 +166,7 @@
     </Example>
     <Example>
       <span slot="header">Filled</span>
-      <div slot="example" class="mr-8 mb-8">
+      <div slot="horizontal" class="mr-8 mb-8">
         <Select variant="filled" bind:value={valueFilled} label="Fruit">
           <Option value="" />
           {#each fruits as fruit}
@@ -176,7 +176,7 @@
           {/each}
         </Select>
       </div>
-      <div slot="example" class="mr-8 mb-8">
+      <div slot="horizontal" class="mr-8 mb-8">
         <Select
           variant="filled"
           bind:value={valueFilledHelperText}
@@ -190,7 +190,7 @@
         </Select>
         <HelperText>Helper text.</HelperText>
       </div>
-      <div slot="example" class="mr-8 mb-8">
+      <div slot="horizontal" class="mr-8 mb-8">
         <Select
           variant="filled"
           enhanced
@@ -206,7 +206,7 @@
           {/each}
         </Select>
       </div>
-      <div slot="example" class="mr-8 mb-8">
+      <div slot="horizontal" class="mr-8 mb-8">
         <Select
           variant="filled"
           withLeadingIcon
@@ -225,7 +225,7 @@
           {/each}
         </Select>
       </div>
-      <div slot="example" class="mr-8 mb-8">
+      <div slot="horizontal" class="mr-8 mb-8">
         <Select
           variant="filled"
           invalid
@@ -239,7 +239,7 @@
           {/each}
         </Select>
       </div>
-      <div slot="example" class="mb-8">
+      <div slot="horizontal" class="mb-8">
         <Select
           variant="filled"
           bind:value={valueFilledDisabled}
@@ -256,7 +256,7 @@
     </Example>
     <Example>
       <span slot="header">Outlined</span>
-      <div slot="example" class="mr-8 mb-8">
+      <div slot="horizontal" class="mr-8 mb-8">
         <Select variant="outlined" bind:value={valueOutlined} label="Fruit">
           <Option value="" />
           {#each fruits as fruit}
@@ -266,7 +266,7 @@
           {/each}
         </Select>
       </div>
-      <div slot="example" class="mr-8 mb-8">
+      <div slot="horizontal" class="mr-8 mb-8">
         <Select
           variant="outlined"
           bind:value={valueOutlinedHelperText}
@@ -280,7 +280,7 @@
         </Select>
         <HelperText>Helper text.</HelperText>
       </div>
-      <div slot="example" class="mr-8 mb-8">
+      <div slot="horizontal" class="mr-8 mb-8">
         <Select
           variant="outlined"
           enhanced
@@ -296,7 +296,7 @@
           {/each}
         </Select>
       </div>
-      <div slot="example" class="mr-8 mb-8">
+      <div slot="horizontal" class="mr-8 mb-8">
         <Select
           variant="outlined"
           withLeadingIcon
@@ -315,7 +315,7 @@
           {/each}
         </Select>
       </div>
-      <div slot="example" class="mr-8 mb-8">
+      <div slot="horizontal" class="mr-8 mb-8">
         <Select
           variant="outlined"
           invalid
@@ -329,7 +329,7 @@
           {/each}
         </Select>
       </div>
-      <div slot="example" class="mb-8">
+      <div slot="horizontal" class="mb-8">
         <Select
           variant="outlined"
           bind:value={valueOutlinedDisabled}

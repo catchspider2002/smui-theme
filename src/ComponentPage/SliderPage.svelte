@@ -1,45 +1,60 @@
 <script>
   import Slider from "@smui/slider";
   import FormField from "@smui/form-field";
+  import Page from "./Page.svelte";
+  import Example from "./Example.svelte";
+
   let value = 50;
   let value2 = 0;
   let value3 = 0;
+  let value4 = 50;
 </script>
 
-<div class="text-2xl font-semibold py-4">Slider</div>
-<div class="pb-4">
-  Sliders allow users to make selections from a range of values.
-</div>
-<div class="text-base font-semibold py-4">Import</div>
-<div class="bg-gray-800 text-gray-300 text-sm p-4">
-  import Switch from "@smui/switch";
-  <br />
-  import FormField from "@smui/form-field";
-</div>
-<div class="text-base font-semibold py-4">Usage</div>
-<div class="pb-2">
-  <div class="flex items-center py-2">
-    <div class="flex-1-0-auto pr-4">Continuous Slider</div>
-    <Slider class="flex-auto" bind:value />
+<Page>
+  <span slot="header">Slider</span>
+  <span slot="description">
+    Sliders allow users to make selections from a range of values.
+  </span>
+  <span slot="import">
+    import Select from "@smui/select";
+    <br />
+    import Icon from "@smui/select/icon/index";
+    <br />
+    import HelperText from "@smui/select/helper-text/index";
+  </span>
+  <div slot="content">
+    <Example>
+      <span slot="header">Usage</span>
+      <div slot="vertical" class="mr-8 mb-8">
+        <div class="flex items-center py-2">
+          <div class="flex-1-0-auto pr-4">Continuous Slider</div>
+          <Slider class="flex-auto" bind:value />
+        </div>
+      </div>
+      <div slot="vertical" class="mr-8 mb-8">
+        <div class="flex items-center py-2">
+          <div class="flex-1-0-auto pr-4">Discrete Slider</div>
+          <Slider bind:value={value2} min={-10} max={10} step={2} discrete />
+        </div>
+      </div>
+      <div slot="vertical" class="mr-8 mb-8">
+        <div class="flex items-center py-2">
+          <div class="flex-1-0-auto pr-4">Discrete with tick marks</div>
+          <Slider
+            bind:value={value3}
+            min={-10}
+            max={10}
+            step={2}
+            discrete
+            displayMarkers />
+        </div>
+      </div>
+      <div slot="vertical" class="mr-8 mb-8">
+        <div class="flex items-center py-2">
+          <div class="flex-1-0-auto pr-4">Disabled</div>
+          <Slider class="flex-auto" bind:value={value4} disabled />
+        </div>
+      </div>
+    </Example>
   </div>
-  <div class="flex items-center py-2">
-    <div class="flex-1-0-auto pr-4">Discrete Slider</div>
-    <Slider bind:value={value2} min={-10} max={10} step={2} discrete />
-  </div>
-  <div class="flex items-center py-2">
-    <div class="flex-1-0-auto pr-4">Discrete with tick marks</div>
-    <Slider
-      bind:value={value3}
-      min={-10}
-      max={10}
-      step={2}
-      discrete
-      displayMarkers />
-  </div>
-  <div class="flex items-center py-2">
-    <div class="flex-1-0-auto pr-4">Disabled</div>
-    <Slider class="flex-auto" bind:value disabled />
-  </div>
-</div>
-<div class="text-base font-semibold py-4">Props</div>
-<div class="pb-2">Property Description Type Default (Ant Design)</div>
+</Page>

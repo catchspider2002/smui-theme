@@ -3,25 +3,47 @@
 
   export let variant; // solid || outline
   export let border; // top || left
-  export let color;
+  export let color = "purple";
   export let iconAlignment = "center"; // center || top
 
   let borderClass, variantClass;
+  var theme = localStorage.getItem("theme") || "light";
+
+  let defaultBgColor = "bg-" + color + "-" + (theme == "dark" ? "800" : "200");
+  let solidBgColor = "bg-" + color + "-" + (theme == "dark" ? "400" : "700");
+  let solidTextColor = theme == "dark" ? "text-black" : "text-white";
+  let outlineBgColor = "bg-" + color + "-" + (theme == "dark" ? "900" : "100");
+  let outlineBorderColor =
+    "border-" + color + "-" + (theme == "dark" ? "600" : "500");
+  let outlineTextColor =
+    "text-" + color + "-" + (theme == "dark" ? "200" : "800");
 
   switch (variant) {
     case "solid":
-      variantClass = "bg-green-600 text-white";
+      variantClass = solidBgColor + " " + solidTextColor;
       break;
     case "outline":
-      variantClass = "bg-green-100 border border-green-400 text-green-700";
+      variantClass =
+        outlineBgColor +
+        " border " +
+        outlineBorderColor +
+        " " +
+        outlineTextColor;
       break;
     default:
-      variantClass = "bg-green-200";
+      variantClass = defaultBgColor;
       break;
   }
 
   if (border) {
-    borderClass = variant == "solid" ? "border-green-400" : "border-green-600";
+    borderClass =
+      variant == "solid"
+        ? "border-" + color + "-500"
+        : "border-" + color + "-700";
+    borderClass =
+      variant == "solid"
+        ? "border-" + color + "-600"
+        : "border-" + color + "-400";
 
     if (border == "top") borderClass += " border-t-4";
     else if (border == "left") borderClass += " border-l-4";

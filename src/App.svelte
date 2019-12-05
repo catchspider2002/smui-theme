@@ -48,13 +48,13 @@
       <Icon class="material-icons text-yellow-400">wb_sunny</Icon>
     </IconButton>
   </div>
+  <ButtonPage />
   <SelectPage />
   <SliderPage />
   <SwitchPage />
   <CheckboxPage />
   <RadioPage />
-  <!-- <ButtonPage />
-  <AlertPage /> -->
+  <AlertPage />
   <!-- <Dashboard /> -->
   <!-- <Timeline /> -->
 </div>

@@ -1,6 +1,9 @@
 <div class="text-base font-semibold py-4">
   <slot name="header" />
 </div>
-<div class="flex items-center flex-wrap">
-  <slot name="example" />
+<div class="flex flex-wrap flex-row">
+  <slot name="horizontal" />
+</div>
+<div class="flex flex-wrap flex-col">
+  <slot name="vertical" />
 </div>
