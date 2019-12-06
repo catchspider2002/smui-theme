@@ -60,7 +60,7 @@
   </span>
   <div slot="content">
     <Example>
-      <span slot="header">Usage1</span>
+      <span slot="header">Usage</span>
       <div slot="horizontal" class="mr-8 mb-8">
         <Select bind:value={valuePrefilled} label="Native Input">
           <Option value="" />

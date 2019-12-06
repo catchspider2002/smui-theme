@@ -3,20 +3,22 @@
 
   export let variant; // solid || outline
   export let border; // top || left
-  export let color = "purple";
+  export let color = "green";
   export let iconAlignment = "center"; // center || top
+  export let title;
 
   let borderClass, variantClass;
   var theme = localStorage.getItem("theme") || "light";
 
-  let defaultBgColor = "bg-" + color + "-" + (theme == "dark" ? "800" : "200");
-  let solidBgColor = "bg-" + color + "-" + (theme == "dark" ? "400" : "700");
+  let defaultBgColor = theme == "dark" ? "bg-green-800" : "bg-green-200";
+  let solidBgColor = theme == "dark" ? "bg-green-400" : "bg-green-700";
   let solidTextColor = theme == "dark" ? "text-black" : "text-white";
-  let outlineBgColor = "bg-" + color + "-" + (theme == "dark" ? "900" : "100");
+  let outlineBgColor = theme == "dark" ? "bg-green-900" : "bg-green-100";
   let outlineBorderColor =
-    "border-" + color + "-" + (theme == "dark" ? "600" : "500");
-  let outlineTextColor =
-    "text-" + color + "-" + (theme == "dark" ? "200" : "800");
+    theme == "dark" ? "border-green-600" : "border-green-400";
+  let outlineBorderColor2 =
+    theme == "dark" ? "border-green-400" : "border-green-600";
+  let outlineTextColor = theme == "dark" ? "text-green-200" : "text-green-800";
 
   switch (variant) {
     case "solid":
@@ -36,14 +38,7 @@
   }
 
   if (border) {
-    borderClass =
-      variant == "solid"
-        ? "border-" + color + "-500"
-        : "border-" + color + "-700";
-    borderClass =
-      variant == "solid"
-        ? "border-" + color + "-600"
-        : "border-" + color + "-400";
+    borderClass = variant == "solid" ? outlineBorderColor : outlineBorderColor2;
 
     if (border == "top") borderClass += " border-t-4";
     else if (border == "left") borderClass += " border-l-4";
@@ -56,15 +51,21 @@
 
 <div
   class="{variantClass}
-  {borderClass} pr-4 py-2 rounded relative flex items-center"
+  {borderClass} py-2 rounded relative flex items-center"
   role="alert">
-  <Icon class="material-icons pl-4 py-1">check_circle</Icon>
-  <div class="px-4">
-    <div class="pt-1 font-bold">Alert Title</div>
-    <div class="pt-1">Something seriously bad happened.</div>
+  <slot />
+  <div class="px-4 flex-1-0-auto">
+    {#if title}
+      <div class="py-1 font-bold">{title}</div>
+    {/if}
+    <div class="py-1">
+      <slot name="description" />
+    </div>
   </div>
-  <span class="absolute top-0 bottom-0 right-0 px-4 py-3">
+  <div class="pr-4 py-1">
     <IconButton class="material-icons" title="Dismiss">close</IconButton>
-
-  </span>
+  </div>
+  <!-- <span class="absolute top-0 bottom-0 right-0 px-4 py-3">
+    <IconButton class="material-icons" title="Dismiss">close</IconButton>
+  </span> -->
 </div>

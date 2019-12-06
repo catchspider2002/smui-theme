@@ -1,4 +1,5 @@
 <script>
+  import IconButton, { Icon } from "@smui/icon-button";
   import Alert from "../Templates/Organisms/Molecules/Atoms/Alert.svelte";
   import Page from "./Page.svelte";
   import Example from "./Example.svelte";
@@ -19,31 +20,45 @@
     <Example>
       <span slot="header">Usage</span>
       <div slot="vertical" class="mb-8">
-        <Alert />
+        <Alert>
+          <Icon class="material-icons pl-4 py-1">check_circle</Icon>
+          <span slot="description">Description for alert</span>
+        </Alert>
       </div>
     </Example>
     <Example>
       <span slot="header">Solid</span>
       <div slot="vertical" class="mb-8">
-        <Alert variant="solid" />
+        <Alert variant="solid">
+          <Icon class="material-icons pl-4 py-1">check_circle</Icon>
+          <span slot="description">Description for alert</span>
+        </Alert>
       </div>
     </Example>
     <Example>
       <span slot="header">Outline</span>
       <div slot="vertical" class="mb-8">
-        <Alert variant="outline" />
+        <Alert variant="outline" title="Alert Title">
+          <Icon class="material-icons pl-4 py-1">check_circle</Icon>
+          <span slot="description">Description for alert</span>
+        </Alert>
       </div>
     </Example>
     <Example>
       <span slot="header">Top Border</span>
       <div slot="vertical" class="mb-8">
-        <Alert variant="solid" border="top" />
+        <Alert variant="solid" border="top">
+          <Icon class="material-icons pl-4 py-1">check_circle</Icon>
+          <span slot="description">Description for alert</span>
+        </Alert>
       </div>
     </Example>
     <Example>
       <span slot="header">Left Border</span>
       <div slot="vertical" class="mb-8">
-        <Alert border="left" />
+        <Alert border="left">
+          <span slot="description">Description for alert</span>
+        </Alert>
       </div>
     </Example>
   </div>

@@ -19,6 +19,7 @@
   import RadioPage from "./ComponentPage/RadioPage.svelte";
   import SliderPage from "./ComponentPage/SliderPage.svelte";
   import SelectPage from "./ComponentPage/SelectPage.svelte";
+  import TextfieldPage from "./ComponentPage/TextfieldPage.svelte";
 
   let initialOff, currentTheme;
 
@@ -48,13 +49,14 @@
       <Icon class="material-icons text-yellow-400">wb_sunny</Icon>
     </IconButton>
   </div>
+  <TextfieldPage />
+  <AlertPage />
   <ButtonPage />
   <SelectPage />
   <SliderPage />
   <SwitchPage />
   <CheckboxPage />
   <RadioPage />
-  <AlertPage />
   <!-- <Dashboard /> -->
   <!-- <Timeline /> -->
 </div>

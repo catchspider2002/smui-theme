@@ -8,6 +8,13 @@
   export let margin = "mx-4";
 </script>
 
-<svg class="w-{size} h-{size} {margin} {padding} {classNames} fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {viewBoxSize} {viewBoxSize}">
-    <path d="{path}"/>
+<svg
+  class="w-{size} h-{size}
+  {margin}
+  {padding}
+  {classNames} fill-current"
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 {viewBoxSize}
+  {viewBoxSize}">
+  <path d={path} />
 </svg>
