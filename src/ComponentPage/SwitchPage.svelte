@@ -12,6 +12,12 @@
   let selected6 = false;
 </script>
 
+<style>
+  * :global(.mdc-form-field) {
+    color: var(--font-color);
+  }
+</style>
+
 <Page>
   <span slot="header">Switch</span>
   <span slot="description">

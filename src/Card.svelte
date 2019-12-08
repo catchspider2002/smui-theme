@@ -39,10 +39,6 @@
   }
 </style>
 
-<svelte:head>
-  <title>Cards - SMUI</title>
-</svelte:head>
-
 <section>
   <h2>Cards</h2>
 

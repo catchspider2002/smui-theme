@@ -11,6 +11,12 @@
   let selected5 = "RightLabel";
 </script>
 
+<style>
+  * :global(.mdc-form-field) {
+    color: var(--font-color);
+  }
+</style>
+
 <Page>
   <span slot="header">Radio</span>
   <span slot="description">

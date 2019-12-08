@@ -4,9 +4,6 @@
   import IconButton, { Icon } from "@smui/icon-button";
 
   import Card from "./Card.svelte";
-  import Checkbox from "./Checkbox.svelte";
-  import Test from "./Test.svelte";
-  import Textfield from "./Textfield.svelte";
   import Tabs from "./Tabs.svelte";
   import Dashboard from "./Dashboard.svelte";
   import Fab from "./Fab.svelte";
@@ -51,6 +48,7 @@
       <Icon class="material-icons text-yellow-400">wb_sunny</Icon>
     </IconButton>
   </div>
+  <Card/>
   <TablePage/>
   <TextareaPage/>
   <TextfieldPage />

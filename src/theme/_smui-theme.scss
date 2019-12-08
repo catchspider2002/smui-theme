@@ -9,9 +9,12 @@
     --secondary-color-text: var(--secondary-color);
     --disabled-button-bg-color: rgba(0, 0, 0, 0.12);
     --disabled-button-color: rgba(0, 0, 0, 0.26);
+    --border-color: #e0e0e0;
     --font-color: #424242;
     --bg-color: #fff;
     --heading-color: #292922;
+    --enabled-color: rgba(0, 0, 0, 0.54);
+    --disabled-color: rgba(0, 0, 0, 0.26);
     --font-family: "Montserrat", sans-serif;
 }
 
@@ -24,9 +27,12 @@
     // --secondary-color-text: #000000;
     --disabled-button-bg-color: rgba(255, 255, 255, 0.12);
     --disabled-button-color: rgba(255, 255, 255, 0.3);
+    --border-color: #515151;
     --font-color: #e1e1ff;
     --bg-color: #161625;
     --heading-color: #818cab;
+    --enabled-color: rgba(255, 255, 255, 0.7);
+    --disabled-color: rgba(255, 255, 255, 0.3);
 }
 
 body {
@@ -34,7 +40,8 @@ body {
     --mdc-theme-secondary: var(--secondary-color);
     --mdc-theme-on-primary: var(--primary-font-color);
     --mdc-theme-on-secondary: var(--secondary-font-color);
-    --mdc-theme-surface: var(--bg-color);
+    // --mdc-theme-surface: var(--bg-color);
+    --mdc-theme-surface: transparent;
     --duration: 0.5s;
     --timing: ease;
     background-color: var(--bg-color);
@@ -43,17 +50,29 @@ body {
     font-family: var(--font-family, "Montserrat", sans-serif);
 }
 
-// Svelte Colors!
-// $mdc-theme-primary: #25ad6e;
-// $mdc-theme-secondary: #6630e6;
-// Other Svelte color: #40b3ff
-
 $mdc-typography-font-family: var(--font-family, "Montserrat", sans-serif);
 $mdc-theme-background: #fff;
 $mdc-theme-surface: #fff;
 // $mdc-button-shape-radius: 999px;
 
 $mdc-theme-error: $material-color-red-900;
+
+// Data Tables
+$mdc-data-table-stroke-color: var(--border-color);
+$mdc-data-table-divider-color: var(--border-color);
+// v3.1.1
+// $mdc-data-table-row-height: 36px;
+// $mdc-data-table-header-row-height: 36px;
+//v4.0.0
+// $mdc-data-table-header-cell-height: 36px;
+// $mdc-data-table-cell-height: 36px;
+
+// Radio
+$mdc-radio-unchecked-color: var(--enabled-color);
+
+//Checkbox
+$mdc-checkbox-border-color: var(--enabled-color);
+$mdc-checkbox-disabled-color: var(--disabled-color);
 
 // .mdc-button--raised:not(:disabled), .mdc-button--unelevated:not(:disabled) {
 .mdc-button--raised:disabled,
@@ -72,13 +91,32 @@ $mdc-theme-error: $material-color-red-900;
 
 .smui-button--color-secondary.mdc-button--raised:not(:disabled),
 .smui-button--color-secondary.mdc-button--unelevated:not(:disabled) {
-    color: --primary-color-text;
+    color: var(--primary-color-text);
 }
 
 .smui-button--color-secondary.mdc-button--raised:not(:disabled),
 .smui-button--color-secondary.mdc-button--unelevated:not(:disabled) {
-    color: --secondary-color-text;
+    color: var(--secondary-color-text);
 }
+
+.mdc-radio__native-control:disabled + .mdc-radio__background .mdc-radio__outer-circle,
+[aria-disabled="true"] .mdc-radio__native-control + .mdc-radio__background .mdc-radio__outer-circle {
+    border-color: var(--disabled-color);
+}
+.mdc-radio__native-control:disabled + .mdc-radio__background .mdc-radio__inner-circle,
+[aria-disabled="true"] .mdc-radio__native-control + .mdc-radio__background .mdc-radio__inner-circle {
+    border-color: var(--disabled-color);
+}
+
+// .mdc-checkbox__native-control[disabled]:not(:checked):not(:indeterminate) ~ .mdc-checkbox__background {
+//     border-color: var(--disabled-color);
+// }
+
+// .mdc-checkbox__native-control[disabled]:checked ~ .mdc-checkbox__background,
+// .mdc-checkbox__native-control[disabled]:indeterminate ~ .mdc-checkbox__background {
+//     border-color: transparent;
+//     background-color: var(--disabled-color);
+// }
 
 // Tailwind additions
 .flex-1-0-auto {

@@ -1,6 +1,7 @@
 <script>
   import DataTable, { Head, Body, Row, Cell } from "@smui/data-table";
   import Checkbox from "@smui/checkbox";
+  import IconButton, { Icon } from "@smui/icon-button";
   import Page from "./Page.svelte";
   import Example from "./Example.svelte";
 
@@ -89,6 +90,54 @@
       </div>
     </Example>
     <Example>
+      <span slot="header">Table with actions</span>
+      <div slot="vertical" class="mb-8">
+        <DataTable table$aria-label="People list">
+          <Head>
+            <Row>
+              <Cell>Name</Cell>
+              <Cell>Email</Cell>
+              <Cell class="text-right">Actions</Cell>
+            </Row>
+          </Head>
+          <Body>
+            <Row>
+              <Cell>Steve</Cell>
+              <Cell>steve@hotmail.com</Cell>
+              <Cell class="text-right">
+                <IconButton class="material-icons">edit</IconButton>
+                <IconButton class="material-icons">delete</IconButton>
+              </Cell>
+            </Row>
+            <Row>
+              <Cell>Sharon</Cell>
+              <Cell>sharon@gmail.com</Cell>
+              <Cell class="text-right">
+                <IconButton class="material-icons">edit</IconButton>
+                <IconButton class="material-icons">delete</IconButton>
+              </Cell>
+            </Row>
+            <Row>
+              <Cell>Rodney</Cell>
+              <Cell>rodney@yahoo.com</Cell>
+              <Cell class="text-right">
+                <IconButton class="material-icons">edit</IconButton>
+                <IconButton class="material-icons">delete</IconButton>
+              </Cell>
+            </Row>
+            <Row>
+              <Cell>Mack</Cell>
+              <Cell>mack@amazon.com</Cell>
+              <Cell class="text-right">
+                <IconButton class="material-icons">edit</IconButton>
+                <IconButton class="material-icons">delete</IconButton>
+              </Cell>
+            </Row>
+          </Body>
+        </DataTable>
+      </div>
+    </Example>
+    <Example>
       <span slot="header">Multiple Selection</span>
       <div slot="vertical" class="mb-8">
         <DataTable>
@@ -116,6 +165,64 @@
                 <Cell numeric>{option.price}</Cell>
               </Row>
             {/each}
+          </Body>
+        </DataTable>
+      </div>
+    </Example>
+    <Example>
+      <span slot="header">Full width</span>
+      <div slot="vertical" class="mb-8 w-full">
+        <DataTable table$aria-label="People list" class="w-full">
+          <Head>
+            <Row>
+              <Cell>Name</Cell>
+              <Cell>Email</Cell>
+              <Cell>Position</Cell>
+              <Cell>Year of joining</Cell>
+              <Cell class="text-right">Actions</Cell>
+            </Row>
+          </Head>
+          <Body>
+            <Row>
+              <Cell>Steve</Cell>
+              <Cell>steve@hotmail.com</Cell>
+              <Cell>Back-end Developer</Cell>
+              <Cell>2013</Cell>
+              <Cell class="text-right">
+                <IconButton class="material-icons">edit</IconButton>
+                <IconButton class="material-icons">delete</IconButton>
+              </Cell>
+            </Row>
+            <Row>
+              <Cell>Sharon</Cell>
+              <Cell>sharon@gmail.com</Cell>
+              <Cell>Full stack Developer</Cell>
+              <Cell>2018</Cell>
+              <Cell class="text-right">
+                <IconButton class="material-icons">edit</IconButton>
+                <IconButton class="material-icons">delete</IconButton>
+              </Cell>
+            </Row>
+            <Row>
+              <Cell>Rodney</Cell>
+              <Cell>rodney@yahoo.com</Cell>
+              <Cell>UX Designer</Cell>
+              <Cell>2015</Cell>
+              <Cell class="text-right">
+                <IconButton class="material-icons">edit</IconButton>
+                <IconButton class="material-icons">delete</IconButton>
+              </Cell>
+            </Row>
+            <Row>
+              <Cell>Mack</Cell>
+              <Cell>mack@amazon.com</Cell>
+              <Cell>Front-end Developer</Cell>
+              <Cell>2018</Cell>
+              <Cell class="text-right">
+                <IconButton class="material-icons">edit</IconButton>
+                <IconButton class="material-icons">delete</IconButton>
+              </Cell>
+            </Row>
           </Body>
         </DataTable>
       </div>
