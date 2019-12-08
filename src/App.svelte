@@ -20,6 +20,8 @@
   import SliderPage from "./ComponentPage/SliderPage.svelte";
   import SelectPage from "./ComponentPage/SelectPage.svelte";
   import TextfieldPage from "./ComponentPage/TextfieldPage.svelte";
+  import TextareaPage from "./ComponentPage/TextareaPage.svelte";
+  import TablePage from "./ComponentPage/TablePage.svelte";
 
   let initialOff, currentTheme;
 
@@ -49,6 +51,8 @@
       <Icon class="material-icons text-yellow-400">wb_sunny</Icon>
     </IconButton>
   </div>
+  <TablePage/>
+  <TextareaPage/>
   <TextfieldPage />
   <AlertPage />
   <ButtonPage />

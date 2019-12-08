@@ -43,18 +43,7 @@
   let valueIconsA = "";
   let valueIconsB = "";
   let valueIconsC = "";
-  let valueTextarea = "";
-  let valueTextareaCharCount = "";
   let valueFullwidth = "";
-  let valueFullwidthTextarea = "";
-  let valueElementsLabel = "";
-  let valueTypeNumber = 0;
-  let valueTypeDate = "";
-  let valueTypeFiles = [];
-  let valueManualA = "";
-  let valueManualB = "";
-  let valueManualC = "";
-  let valueManualD = "";
 
   function clickableHandler() {
     alert(`Sending to ${valueClickable}!`);
@@ -452,6 +441,19 @@
       </div>
       <div slot="horizontal" class="mr-8 mb-8">
         <Textfield variant="outlined" bind:value={valueNoLabelC} />
+      </div>
+    </Example>
+    <Example>
+      <span slot="header">Full width</span>
+      <div slot="horizontal" class="mb-8 w-full">
+        <Textfield
+          fullwidth
+          lineRipple={false}
+          bind:value={valueFullwidth}
+          label="Label"
+          input$aria-controls="helper-text-fullwidth"
+          input$aria-describedby="helper-text-fullwidth" />
+        <HelperText id="helper-text-fullwidth">Helper Text</HelperText>
       </div>
     </Example>
   </div>

@@ -1,0 +1,124 @@
+<script>
+  import DataTable, { Head, Body, Row, Cell } from "@smui/data-table";
+  import Checkbox from "@smui/checkbox";
+  import Page from "./Page.svelte";
+  import Example from "./Example.svelte";
+
+  $: selectedPrice = selected.reduce(
+    (total, option) => option.price + total,
+    0
+  );
+  let options = [
+    {
+      name: "Broom",
+      description: "A wooden handled broom.",
+      price: 15
+    },
+    {
+      name: "Dust Pan",
+      description: "A plastic dust pan.",
+      price: 8
+    },
+    {
+      name: "Mop",
+      description: "A strong, durable mop.",
+      price: 18
+    },
+    {
+      name: "Bucket",
+      description: "A metal bucket.",
+      price: 13
+    }
+  ];
+  let selected = [options[2]];
+</script>
+
+<style>
+  * :global(.mdc-data-table__cell, .mdc-data-table__header-cell) {
+    color: var(--font-color);
+  }
+</style>
+
+<Page>
+  <span slot="header">Table</span>
+  <span slot="description">
+    Tables display information in a grid-like format of rows and columns. They
+    organize information in a way that’s easy to scan, so that users can look
+    for patterns and insights.
+  </span>
+  <span slot="import">
+    import Icon from "@smui/select/icon/index";
+    <br />
+    import HelperText from "@smui/select/helper-text/index";
+  </span>
+  <div slot="content">
+    <Example>
+      <span slot="header">Simple Table</span>
+      <div slot="vertical" class="mb-8">
+        <DataTable table$aria-label="People list">
+          <Head>
+            <Row>
+              <Cell>Name</Cell>
+              <Cell>Favorite Color</Cell>
+              <Cell>Favorite Number</Cell>
+            </Row>
+          </Head>
+          <Body>
+            <Row>
+              <Cell>Steve</Cell>
+              <Cell>Red</Cell>
+              <Cell numeric>45</Cell>
+            </Row>
+            <Row>
+              <Cell>Sharon</Cell>
+              <Cell>Purple</Cell>
+              <Cell numeric>5</Cell>
+            </Row>
+            <Row>
+              <Cell>Rodney</Cell>
+              <Cell>Orange</Cell>
+              <Cell numeric>32</Cell>
+            </Row>
+            <Row>
+              <Cell>Mack</Cell>
+              <Cell>Blue</Cell>
+              <Cell numeric>12</Cell>
+            </Row>
+          </Body>
+        </DataTable>
+      </div>
+    </Example>
+    <Example>
+      <span slot="header">Multiple Selection</span>
+      <div slot="vertical" class="mb-8">
+        <DataTable>
+          <Head>
+            <Row>
+              <Cell checkbox>
+                <Checkbox />
+              </Cell>
+              <Cell>Name</Cell>
+              <Cell>Description</Cell>
+              <Cell>Price</Cell>
+            </Row>
+          </Head>
+          <Body>
+            {#each options as option (option.name)}
+              <Row>
+                <Cell checkbox>
+                  <Checkbox
+                    bind:group={selected}
+                    value={option}
+                    valueKey={option.name} />
+                </Cell>
+                <Cell>{option.name}</Cell>
+                <Cell>{option.description}</Cell>
+                <Cell numeric>{option.price}</Cell>
+              </Row>
+            {/each}
+          </Body>
+        </DataTable>
+      </div>
+    </Example>
+  </div>
+</Page>
