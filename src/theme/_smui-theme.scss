@@ -5,17 +5,17 @@
     --secondary-color: #c53030; // bg-red-700
     --primary-font-color: #ffffff;
     --secondary-font-color: #ffffff;
-    --primary-color-text: var(--primary-color);
-    --secondary-color-text: var(--secondary-color);
     --disabled-button-bg-color: rgba(0, 0, 0, 0.12);
-    --disabled-button-color: rgba(0, 0, 0, 0.26);
-    --border-color: #e0e0e0;
-    --font-color: #424242;
+    --border-color: rgba(255, 255, 255, 0.7);
+    --font-color: rgba(0, 0, 0, 0.87);
+    --other-font-color: black;
     --bg-color: #fff;
     --heading-color: #292922;
     --enabled-color: rgba(0, 0, 0, 0.54);
     --disabled-color: rgba(0, 0, 0, 0.26);
     --font-family: "Montserrat", sans-serif;
+    --filter: invert(0%);
+    // $mdc-text-field-ink-color: black;
 }
 
 [data-theme="dark"] {
@@ -23,16 +23,15 @@
     --secondary-color: #fc8181; // bg-red-400
     --primary-font-color: #000000;
     --secondary-font-color: #000000;
-    // --primary-color-text: #000000;
-    // --secondary-color-text: #000000;
     --disabled-button-bg-color: rgba(255, 255, 255, 0.12);
-    --disabled-button-color: rgba(255, 255, 255, 0.3);
-    --border-color: #515151;
-    --font-color: #e1e1ff;
-    --bg-color: #161625;
+    --border-color: rgba(0, 0, 0, 0.54);
+    --font-color: rgba(255, 255, 255, 0.87);
+    --other-font-color: white;
+    --bg-color: rgb(7, 7, 8);
     --heading-color: #818cab;
     --enabled-color: rgba(255, 255, 255, 0.7);
     --disabled-color: rgba(255, 255, 255, 0.3);
+    --filter: invert(100%);
 }
 
 body {
@@ -40,6 +39,7 @@ body {
     --mdc-theme-secondary: var(--secondary-color);
     --mdc-theme-on-primary: var(--primary-font-color);
     --mdc-theme-on-secondary: var(--secondary-font-color);
+    --mdc-text-field-ink-color: var(--other-font-color);
     // --mdc-theme-surface: var(--bg-color);
     --mdc-theme-surface: transparent;
     --duration: 0.5s;
@@ -58,8 +58,8 @@ $mdc-theme-surface: #fff;
 $mdc-theme-error: $material-color-red-900;
 
 // Data Tables
-$mdc-data-table-stroke-color: var(--border-color);
-$mdc-data-table-divider-color: var(--border-color);
+$mdc-data-table-stroke-color: var(--disabled-color);
+$mdc-data-table-divider-color: var(--disabled-color);
 // v3.1.1
 // $mdc-data-table-row-height: 36px;
 // $mdc-data-table-header-row-height: 36px;
@@ -74,29 +74,68 @@ $mdc-radio-unchecked-color: var(--enabled-color);
 $mdc-checkbox-border-color: var(--enabled-color);
 $mdc-checkbox-disabled-color: var(--disabled-color);
 
+// Text field
+// $mdc-text-field-ink-color: $other-font-color;
+
+$mdc-text-field-bottom-line-hover: var(--font-color);
+$mdc-text-field-bottom-line-idle: var(--enabled-color);
+$mdc-text-field-outlined-idle-border: var(--enabled-color);
+$mdc-text-field-outlined-disabled-border: var(--disabled-button-bg-color);
+$mdc-text-field-outlined-hover-border: var(--font-color);
+$mdc-text-field-label: var(--other-font-color);
+
+$mdc-text-field-helper-text-color: var(--enabled-color);
+$mdc-text-field-icon-color: var(--enabled-color);
+$mdc-text-field-focused-label-color: var(--font-color);
+$mdc-text-field-placeholder-ink-color: var(--enabled-color);
+
+$mdc-text-field-disabled-label-color: var(--disabled-color);
+$mdc-text-field-disabled-ink-color: var(--disabled-color);
+$mdc-text-field-disabled-helper-text-color: var(--disabled-color);
+$mdc-text-field-background: var(--disabled-button-bg-color);
+$mdc-text-field-disabled-background: var(--disabled-color);
+
+// Select
+// $mdc-select-icon-color: var(--enabled-color);
+$mdc-select-disabled-label-color: var(--disabled-color);
+$mdc-select-disabled-icon-color: var(--disabled-color);
+$mdc-select-disabled-ink-color: var(--disabled-color);
+$mdc-select-outlined-idle-border: var(--enabled-color);
+$mdc-select-outlined-disabled-border: var(--disabled-button-bg-color);
+$mdc-select-outlined-hover-border: var(--font-color);
+
+$mdc-select-helper-text-color: var(--enabled-color);
+$mdc-select-bottom-line-hover-color: var(--font-color);
+$mdc-select-bottom-line-idle-color: var(--enabled-color);
+$mdc-select-focused-label-color: var(--primary-color);
+$mdc-select-label-color: var(--enabled-color);
+$mdc-select-fill-color: var(--disabled-button-bg-color);
+$mdc-select-disabled-fill-color: var(--disabled-color);
+$mdc-select-dropdown-opacity: 1 !default;
+
 // .mdc-button--raised:not(:disabled), .mdc-button--unelevated:not(:disabled) {
 .mdc-button--raised:disabled,
 .mdc-button--unelevated:disabled {
     background-color: var(--disabled-button-bg-color, #383838);
-    color: var(--disabled-button-color, #5c5c5c);
+    color: var(--disabled-color, #5c5c5c);
 }
 
 .mdc-button--outlined:disabled {
-    border-color: var(--disabled-button-color, #5c5c5c);
+    border-color: var(--disabled-color, #5c5c5c);
 }
 
 .mdc-button:disabled {
-    color: var(--disabled-button-color, #5c5c5c);
+    color: var(--disabled-color, #5c5c5c);
 }
 
 .smui-button--color-secondary.mdc-button--raised:not(:disabled),
 .smui-button--color-secondary.mdc-button--unelevated:not(:disabled) {
-    color: var(--primary-color-text);
+    color: var(--primary-font-color);
 }
 
 .smui-button--color-secondary.mdc-button--raised:not(:disabled),
 .smui-button--color-secondary.mdc-button--unelevated:not(:disabled) {
-    color: var(--secondary-color-text);
+    color: var(--secondary-font-color);
 }
 
 .mdc-radio__native-control:disabled + .mdc-radio__background .mdc-radio__outer-circle,
@@ -106,6 +145,33 @@ $mdc-checkbox-disabled-color: var(--disabled-color);
 .mdc-radio__native-control:disabled + .mdc-radio__background .mdc-radio__inner-circle,
 [aria-disabled="true"] .mdc-radio__native-control + .mdc-radio__background .mdc-radio__inner-circle {
     border-color: var(--disabled-color);
+}
+
+.mdc-text-field:not(.mdc-text-field--disabled) .mdc-text-field__input {
+    color: var(--other-font-color);
+}
+
+.mdc-select:not(.mdc-select--disabled) .mdc-select__native-control,
+.mdc-select:not(.mdc-select--disabled) .mdc-select__selected-text {
+    color: var(--other-font-color);
+}
+
+.mdc-select:not(.mdc-select--disabled) .mdc-select__native-control option {
+    color: black;
+}
+
+.mdc-select--with-leading-icon:not(.mdc-select--disabled) .mdc-select__icon {
+    color: var(--enabled-color);
+    opacity: 1;
+}
+
+.mdc-select__dropdown-icon,
+.mdc-select--focused .mdc-select__dropdown-icon {
+    filter: var(--filter);
+}
+
+.mdc-select--invalid .mdc-select__dropdown-icon {
+    filter: invert(0%);
 }
 
 // .mdc-checkbox__native-control[disabled]:not(:checked):not(:indeterminate) ~ .mdc-checkbox__background {

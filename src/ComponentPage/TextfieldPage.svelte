@@ -376,9 +376,9 @@
           variant="outlined"
           bind:value={valueOutlinedD}
           label="Invalid"
-          input$aria-controls="helper-text-outlined-c"
-          input$aria-describedby="helper-text-outlined-c" />
-        <HelperText id="helper-text-outlined-c">Helper Text</HelperText>
+          input$aria-controls="helper-text-outlined-d"
+          input$aria-describedby="helper-text-outlined-d" />
+        <HelperText id="helper-text-outlined-d">Helper Text</HelperText>
       </div>
       <div slot="horizontal" class="mb-8">
         <Textfield

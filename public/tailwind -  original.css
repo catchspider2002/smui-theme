@@ -454,6 +454,7 @@ html {
 *::before,
 *::after {
   border-width: 0;
+  /* border-style: solid;  Commented by Naveen */
   border-color: #e2e8f0;
 }
 

@@ -37,8 +37,19 @@
   };
 </script>
 
+<style>
+  .themeButton {
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+  }
+</style>
+
 <div class="p-4">
-  <div style="display: flex; align-items: center;">
+  <div class="themeButton">
     <IconButton
       toggle
       bind:pressed={initialOff}
@@ -48,9 +59,9 @@
       <Icon class="material-icons text-yellow-400">wb_sunny</Icon>
     </IconButton>
   </div>
-  <Card/>
-  <TablePage/>
-  <TextareaPage/>
+  <Card />
+  <TablePage />
+  <TextareaPage />
   <TextfieldPage />
   <AlertPage />
   <ButtonPage />
