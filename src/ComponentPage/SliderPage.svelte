@@ -10,6 +10,31 @@
   let value4 = 50;
 </script>
 
+<style>
+  * :global(.mdc-slider:not(.mdc-slider--disabled) .mdc-slider__track) {
+    background-color: var(--mdc-theme-primary);
+  }
+
+  * :global(.mdc-slider:not(.mdc-slider--disabled) .mdc-slider__thumb) {
+    fill: var(--mdc-theme-primary);
+    stroke: var(--mdc-theme-primary);
+  }
+
+  *
+    :global(.mdc-slider:not(.mdc-slider--disabled)
+      .mdc-slider__focus-ring, .mdc-slider:not(.mdc-slider--disabled)
+      .mdc-slider__pin) {
+    background-color: var(--mdc-theme-primary);
+  }
+
+  *
+    :global(.mdc-slider:not(.mdc-slider--disabled)
+      .mdc-slider__track-marker-container:after, .mdc-slider:not(.mdc-slider--disabled)
+      .mdc-slider__track-marker:after) {
+    background-color: var(--mdc-theme-primary);
+  }
+</style>
+
 <Page>
   <span slot="header">Slider</span>
   <span slot="description">

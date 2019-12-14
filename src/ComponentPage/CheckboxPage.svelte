@@ -16,6 +16,13 @@
   * :global(.mdc-form-field) {
     color: var(--font-color);
   }
+  /**
+     :global(.mdc-checkbox__native-control:enabled:checked
+      ~ .mdc-checkbox__background, .mdc-checkbox__native-control:enabled:indeterminate
+      ~ .mdc-checkbox__background) {
+    border-color: var(--mdc-theme-primary);
+    background-color: var(--mdc-theme-primary);
+  } */
 </style>
 
 <Page>

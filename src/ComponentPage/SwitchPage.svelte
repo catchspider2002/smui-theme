@@ -16,6 +16,13 @@
   * :global(.mdc-form-field) {
     color: var(--font-color);
   }
+
+  /* *
+    :global(.mdc-switch.mdc-switch--checked
+      .mdc-switch__thumb, .mdc-switch.mdc-switch--checked .mdc-switch__track) {
+    background-color: var(--mdc-theme-primary);
+    border-color: var(--mdc-theme-primary);
+  } */
 </style>
 
 <Page>
