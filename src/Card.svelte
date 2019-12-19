@@ -22,12 +22,16 @@
     align-items: center;
     min-height: 500px;
     min-width: 380px;
-    background-color: #5e5e5e;
+    background-color: var(--bg-layer-color);
     margin-right: 20px;
     margin-bottom: 20px;
   }
   .card-container.short {
     min-height: 200px;
+  }
+
+  * :global(.mdc-card) {
+    background-color: var(--bg-card-color);
   }
 
   * :global(.card-media-16x9) {
