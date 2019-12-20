@@ -1,0 +1,20 @@
+{
+  "bundler": "rollup",
+  "shimport": "1.0.1",
+  "assets": {
+    "main": "client.b9274c9d.js"
+  },
+  "css": {
+    "main": null,
+    "chunks": {
+      "index.svelte": [
+        "ButtonPage.63603cbd.css"
+      ],
+      "ButtonPage.svelte": [
+        "ButtonPage.63603cbd.css"
+      ],
+      "Example.svelte": [],
+      "Page.svelte": []
+    }
+  }
+}

@@ -46,7 +46,8 @@
 </script>
 
 <style>
-
+  * :global(.outlineBgColor) {
+  }
 </style>
 
 <div
