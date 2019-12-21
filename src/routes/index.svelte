@@ -1,5 +1,6 @@
 <script>
-  import ButtonPage from "./ButtonPage.svelte";
+//   import ButtonPage from "./ComponentPages/ButtonPage.svelte";
+//   import CheckboxPage from "./ComponentPages/CheckboxPage.svelte";
 </script>
 
 <style>
@@ -9,6 +10,6 @@
 <svelte:head>
   <title>Sapper project template</title>
 </svelte:head>
-
-<h1>Great success!</h1>
-<ButtonPage />
+Test Page
+<!-- <ButtonPage />
+<CheckboxPage /> -->

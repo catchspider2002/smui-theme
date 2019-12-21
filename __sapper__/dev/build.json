@@ -2,19 +2,20 @@
   "bundler": "rollup",
   "shimport": "1.0.1",
   "assets": {
-    "main": "client.b9274c9d.js"
+    "main": "client.46167d97.js"
   },
   "css": {
-    "main": null,
+    "main": "main.2553857618.css",
     "chunks": {
-      "index.svelte": [
-        "ButtonPage.63603cbd.css"
+      "index.svelte": [],
+      "ComponentPages/CheckboxPage.svelte": [
+        "CheckboxPage.c8156243.css"
       ],
-      "ButtonPage.svelte": [
-        "ButtonPage.63603cbd.css"
+      "ComponentPages/ButtonPage.svelte": [
+        "ButtonPage.9aa58e5c.css"
       ],
-      "Example.svelte": [],
-      "Page.svelte": []
+      "ComponentPages/Example.svelte": [],
+      "ComponentPages/Page.svelte": []
     }
   }
 }
